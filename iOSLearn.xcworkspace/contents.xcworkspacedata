@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:05-Restructure/05-Restructure.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:05-Autosize/05-Autosize.xcodeproj">
    </FileRef>
    <FileRef
