@@ -107,9 +107,35 @@
                     <view key="view" contentMode="scaleToFill" id="NiW-Zu-gMS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pL-5T-aMs">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Z5w-qL-cau" id="75V-nZ-5Fi"/>
+                                    <outlet property="delegate" destination="Z5w-qL-cau" id="VBu-w1-ePk"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgU-gI-kE4">
+                                <rect key="frame" x="138" y="269" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Z5w-qL-cau" eventType="touchUpInside" id="m10-Ji-8Jn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1pL-5T-aMs" firstAttribute="top" secondItem="NiW-Zu-gMS" secondAttribute="topMargin" id="52D-nM-6qF"/>
+                            <constraint firstItem="KgU-gI-kE4" firstAttribute="centerX" secondItem="NiW-Zu-gMS" secondAttribute="centerX" id="De7-cP-qwy"/>
+                            <constraint firstItem="KgU-gI-kE4" firstAttribute="centerY" secondItem="NiW-Zu-gMS" secondAttribute="centerY" id="J5I-av-qFg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1pL-5T-aMs" secondAttribute="trailing" constant="-20" id="gIU-hh-rUM"/>
+                            <constraint firstItem="1pL-5T-aMs" firstAttribute="leading" secondItem="NiW-Zu-gMS" secondAttribute="leadingMargin" constant="-20" id="tOV-1V-ntc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Dependent" image="dependenticon" id="0yG-PO-SbE"/>
+                    <connections>
+                        <outlet property="dependentPicker" destination="1pL-5T-aMs" id="67r-Ip-sfe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqo-6M-KZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
