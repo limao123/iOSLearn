@@ -26,7 +26,11 @@ static NSString *CellTableIdertifier = @"CellTableIdertifier";
                        @{@"Name" : @"Mac Mini", @"Color" : @"Silver"},
                        @{@"Name" : @"Mac Pro", @"Color" : @"Black"}];
     UITableView *tableView = (id)[self.view viewWithTag:1];
-    [tableView registerClass:[NameAndColorCell class] forCellReuseIdentifier:CellTableIdertifier];
+//    [tableView registerClass:[NameAndColorCell class] forCellReuseIdentifier:CellTableIdertifier];
+    tableView.rowHeight = 65;
+    UINib *nib = [UINib nibWithNibName:@"NameAndColorCell" bundle:nil];
+    [tableView registerNib:nib forCellReuseIdentifier:CellTableIdertifier];
+    
     UIEdgeInsets contentInset = tableView.contentInset;
     contentInset.top = 20;
     [tableView setContentInset:contentInset];

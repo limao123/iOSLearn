@@ -9,8 +9,8 @@
 #import "NameAndColorCell.h"
 
 @interface NameAndColorCell()
-@property (strong, nonatomic) UILabel *nameLabel;
-@property (strong, nonatomic) UILabel *colorLabel;
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *colorLabel;
 
 @end
 
@@ -19,27 +19,27 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        CGRect nameLabelRect = CGRectMake(0, 5, 70, 15);
-        UILabel *nameMarker = [[UILabel alloc] initWithFrame:nameLabelRect];
-        nameMarker.textAlignment = NSTextAlignmentRight;
-        nameMarker.text = @"name";
-        nameMarker.font = [UIFont boldSystemFontOfSize:12];
-        [self.contentView addSubview:nameMarker];
-        
-        CGRect colorLabelRect = CGRectMake(0, 26, 70, 15);
-        UILabel *coloerMaker = [[UILabel alloc] initWithFrame:colorLabelRect];
-        coloerMaker.textAlignment = NSTextAlignmentRight;
-        coloerMaker.text = @"Color:";
-        coloerMaker.font = [UIFont boldSystemFontOfSize:12];
-        [self.contentView addSubview:coloerMaker];
-        
-        CGRect nameValueRect = CGRectMake(80, 5, 200, 15);
-        _nameLabel = [[UILabel alloc] initWithFrame:nameValueRect];
-        [self.contentView addSubview:_nameLabel];
-        
-        CGRect colorValueRect = CGRectMake(80, 25, 200, 15);
-        _colorLabel = [[UILabel alloc] initWithFrame:colorValueRect];
-        [self.contentView addSubview:_colorLabel];
+//        CGRect nameLabelRect = CGRectMake(0, 5, 70, 15);
+//        UILabel *nameMarker = [[UILabel alloc] initWithFrame:nameLabelRect];
+//        nameMarker.textAlignment = NSTextAlignmentRight;
+//        nameMarker.text = @"name";
+//        nameMarker.font = [UIFont boldSystemFontOfSize:12];
+//        [self.contentView addSubview:nameMarker];
+//        
+//        CGRect colorLabelRect = CGRectMake(0, 26, 70, 15);
+//        UILabel *coloerMaker = [[UILabel alloc] initWithFrame:colorLabelRect];
+//        coloerMaker.textAlignment = NSTextAlignmentRight;
+//        coloerMaker.text = @"Color:";
+//        coloerMaker.font = [UIFont boldSystemFontOfSize:12];
+//        [self.contentView addSubview:coloerMaker];
+//        
+//        CGRect nameValueRect = CGRectMake(80, 5, 200, 15);
+//        _nameLabel = [[UILabel alloc] initWithFrame:nameValueRect];
+//        [self.contentView addSubview:_nameLabel];
+//        
+//        CGRect colorValueRect = CGRectMake(80, 25, 200, 15);
+//        _colorLabel = [[UILabel alloc] initWithFrame:colorValueRect];
+//        [self.contentView addSubview:_colorLabel];
     }
     return self;
 }
