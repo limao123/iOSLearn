@@ -18,6 +18,8 @@
 		AB6D8D0B1C7F38FA00A860C6 /* DependentComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6D8D0A1C7F38FA00A860C6 /* DependentComponentPickerViewController.m */; };
 		AB6D8D0E1C7F390D00A860C6 /* CustomPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6D8D0D1C7F390D00A860C6 /* CustomPickerViewController.m */; };
 		AB8F8F901C80339800877B8E /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB8F8F8F1C80339800877B8E /* statedictionary.plist */; };
+		AB8F8F931C803B7200877B8E /* crunch.wav in Resources */ = {isa = PBXBuildFile; fileRef = AB8F8F911C803B7200877B8E /* crunch.wav */; };
+		AB8F8F941C803B7200877B8E /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = AB8F8F921C803B7200877B8E /* win.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		AB6D8D0C1C7F390D00A860C6 /* CustomPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomPickerViewController.h; path = ../CustomPickerViewController.h; sourceTree = "<group>"; };
 		AB6D8D0D1C7F390D00A860C6 /* CustomPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomPickerViewController.m; path = ../CustomPickerViewController.m; sourceTree = "<group>"; };
 		AB8F8F8F1C80339800877B8E /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = statedictionary.plist; sourceTree = "<group>"; };
+		AB8F8F911C803B7200877B8E /* crunch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crunch.wav; sourceTree = "<group>"; };
+		AB8F8F921C803B7200877B8E /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				AB6D8CF71C7F385900A860C6 /* LaunchScreen.storyboard */,
 				AB6D8CFA1C7F385900A860C6 /* Info.plist */,
 				AB8F8F8F1C80339800877B8E /* statedictionary.plist */,
+				AB8F8F911C803B7200877B8E /* crunch.wav */,
+				AB8F8F921C803B7200877B8E /* win.wav */,
 				AB6D8CE91C7F385900A860C6 /* Supporting Files */,
 			);
 			path = "07-Pickers";
@@ -167,8 +173,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8F8F931C803B7200877B8E /* crunch.wav in Resources */,
 				AB6D8CF91C7F385900A860C6 /* LaunchScreen.storyboard in Resources */,
 				AB6D8CF61C7F385900A860C6 /* Assets.xcassets in Resources */,
+				AB8F8F941C803B7200877B8E /* win.wav in Resources */,
 				AB8F8F901C80339800877B8E /* statedictionary.plist in Resources */,
 				AB6D8CF41C7F385900A860C6 /* Main.storyboard in Resources */,
 			);

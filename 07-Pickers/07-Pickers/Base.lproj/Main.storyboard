@@ -144,6 +144,7 @@
         <!--Custom-->
         <scene sceneID="V96-OS-f73">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYS-6u-yeg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bXA-74-dpM" customClass="CustomPickerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QbL-eR-lsP"/>
@@ -152,13 +153,55 @@
                     <view key="view" contentMode="scaleToFill" id="8lY-Gp-kyn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rv6-vW-AST">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="7vR-hJ-CAy"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="bXA-74-dpM" id="Xkz-6S-ngU"/>
+                                    <outlet property="delegate" destination="bXA-74-dpM" id="EOu-kg-meD"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExQ-uR-fd3">
+                                <rect key="frame" x="0.0" y="226" width="320" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="OkS-mt-lyi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" red="0.86666666670000003" green="0.42745098040000001" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5C-t2-gYh">
+                                <rect key="frame" x="145" y="294" width="31" height="30"/>
+                                <state key="normal" title="Spin"/>
+                                <connections>
+                                    <action selector="spin:" destination="bXA-74-dpM" eventType="touchUpInside" id="FpB-uY-bDx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R5C-t2-gYh" firstAttribute="top" secondItem="ExQ-uR-fd3" secondAttribute="bottom" constant="10" id="39f-HW-MPt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rv6-vW-AST" secondAttribute="trailing" constant="-20" id="Ce0-Xa-ukM"/>
+                            <constraint firstItem="Rv6-vW-AST" firstAttribute="top" secondItem="8lY-Gp-kyn" secondAttribute="topMargin" id="ERx-nd-XML"/>
+                            <constraint firstAttribute="trailing" secondItem="ExQ-uR-fd3" secondAttribute="trailing" id="M1e-CM-gng"/>
+                            <constraint firstItem="Rv6-vW-AST" firstAttribute="leading" secondItem="8lY-Gp-kyn" secondAttribute="leadingMargin" constant="-20" id="lB9-AM-7Kl"/>
+                            <constraint firstItem="ExQ-uR-fd3" firstAttribute="top" secondItem="Rv6-vW-AST" secondAttribute="bottom" constant="10" id="n15-Se-Tvp"/>
+                            <constraint firstItem="R5C-t2-gYh" firstAttribute="centerX" secondItem="8lY-Gp-kyn" secondAttribute="centerX" id="o8h-or-W75"/>
+                            <constraint firstItem="ExQ-uR-fd3" firstAttribute="leading" secondItem="8lY-Gp-kyn" secondAttribute="leading" id="v2D-s7-qTW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Custom" image="toolicon" id="xx0-8O-fUt"/>
+                    <connections>
+                        <outlet property="button" destination="R5C-t2-gYh" id="DRK-BQ-8Lc"/>
+                        <outlet property="picker" destination="Rv6-vW-AST" id="UOG-IE-pye"/>
+                        <outlet property="winLabel" destination="ExQ-uR-fd3" id="f8Z-J4-1Oi"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WYS-6u-yeg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="376" y="2648"/>
+            <point key="canvasLocation" x="372" y="2680"/>
         </scene>
         <!--Date-->
         <scene sceneID="q2M-XE-U4C">
