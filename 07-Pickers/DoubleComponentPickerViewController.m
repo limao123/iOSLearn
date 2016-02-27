@@ -39,11 +39,6 @@
     self.breadTypes = @[@"White",@"Whole Wheat",@"Rye",@"Sourdough",@"Seven Grain"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark -
 #pragma mark Picker Data Source Methods
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{

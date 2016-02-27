@@ -144,7 +144,6 @@
         <!--Custom-->
         <scene sceneID="V96-OS-f73">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WYS-6u-yeg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bXA-74-dpM" customClass="CustomPickerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QbL-eR-lsP"/>
@@ -200,6 +199,7 @@
                         <outlet property="winLabel" destination="ExQ-uR-fd3" id="f8Z-J4-1Oi"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYS-6u-yeg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="372" y="2680"/>
         </scene>
