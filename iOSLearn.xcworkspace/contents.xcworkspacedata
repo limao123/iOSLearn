@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:10-DialogViewer/10-DialogViewer.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:08-Sections/08-Sections.xcodeproj">
    </FileRef>
    <FileRef
