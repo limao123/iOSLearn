@@ -8,6 +8,7 @@
 
 #import "FontListTableViewController.h"
 #import "FavoritesList.h"
+#import "FontSizeTableViewController.h"
 
 @interface FontListTableViewController ()
 @property (assign, nonatomic) CGFloat cellPointSize;
@@ -68,6 +69,14 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     UIFont *font = [self fontForDisplayAtIndexPath:indexPath];
     return 25 + font.ascender - font.descender;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    UIFont *font = [self fontForDisplayAtIndexPath:indexPath];
+    FontSizeTableViewController *sizesVC = segue.destinationViewController;
+    sizesVC.navigationItem.title = font.fontName;
+    sizesVC.font = font;
 }
 
 @end

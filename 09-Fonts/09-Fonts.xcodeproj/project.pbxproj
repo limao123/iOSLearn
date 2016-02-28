@@ -15,6 +15,7 @@
 		ABC464BC1C82830D006AAC4C /* FavoritesList.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC464BB1C82830D006AAC4C /* FavoritesList.m */; };
 		ABC464BF1C828569006AAC4C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC464BE1C828569006AAC4C /* RootViewController.m */; };
 		ABC464C21C828E2F006AAC4C /* FontListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC464C11C828E2F006AAC4C /* FontListTableViewController.m */; };
+		ABC464C51C829759006AAC4C /* FontSizeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC464C41C829759006AAC4C /* FontSizeTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		ABC464BE1C828569006AAC4C /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		ABC464C01C828E2F006AAC4C /* FontListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontListTableViewController.h; sourceTree = "<group>"; };
 		ABC464C11C828E2F006AAC4C /* FontListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontListTableViewController.m; sourceTree = "<group>"; };
+		ABC464C31C829759006AAC4C /* FontSizeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontSizeTableViewController.h; sourceTree = "<group>"; };
+		ABC464C41C829759006AAC4C /* FontSizeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontSizeTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				ABC464BE1C828569006AAC4C /* RootViewController.m */,
 				ABC464C01C828E2F006AAC4C /* FontListTableViewController.h */,
 				ABC464C11C828E2F006AAC4C /* FontListTableViewController.m */,
+				ABC464C31C829759006AAC4C /* FontSizeTableViewController.h */,
+				ABC464C41C829759006AAC4C /* FontSizeTableViewController.m */,
 			);
 			path = "09-Fonts";
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABC464BC1C82830D006AAC4C /* FavoritesList.m in Sources */,
+				ABC464C51C829759006AAC4C /* FontSizeTableViewController.m in Sources */,
 				ABC464A81C81ABBE006AAC4C /* AppDelegate.m in Sources */,
 				ABC464C21C828E2F006AAC4C /* FontListTableViewController.m in Sources */,
 				ABC464BF1C828569006AAC4C /* RootViewController.m in Sources */,
