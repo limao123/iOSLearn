@@ -17,6 +17,9 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
+      location = "group:09-Fonts/09-Fonts.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:07-Pickers/07-Pickers.xcodeproj">
    </FileRef>
    <FileRef
