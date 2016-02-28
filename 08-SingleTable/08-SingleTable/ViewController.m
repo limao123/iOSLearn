@@ -87,6 +87,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+//设置行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 70;
 }
