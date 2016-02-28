@@ -41,15 +41,15 @@
                                     <segue destination="nSk-Fw-2Bg" kind="push" id="Pbc-rB-4z8"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Favorites" textLabel="f9I-hi-utx" style="IBUITableViewCellStyleDefault" id="EC9-Tt-zDn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Favorites" textLabel="f9I-hi-utx" style="IBUITableViewCellStyleDefault" id="EC9-Tt-zDn">
                                 <rect key="frame" x="0.0" y="136" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EC9-Tt-zDn" id="tsq-kW-ElT">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f9I-hi-utx">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Favorite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f9I-hi-utx">
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -57,6 +57,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="nSk-Fw-2Bg" kind="push" id="H3N-Fc-8J8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -103,7 +106,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="gdh-1U-wqE" kind="push" id="OJc-Zz-53C"/>
+                                    <segue destination="gdh-1U-wqE" kind="push" identifier="ShowFontSize" id="OJc-Zz-53C"/>
+                                    <segue destination="BGH-xZ-XoY" kind="push" identifier="ShowFontInfo" trigger="accessoryAction" id="056-VR-CQy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -163,6 +167,90 @@
             </objects>
             <point key="canvasLocation" x="1161" y="406"/>
         </scene>
+        <!--Font Info View Controller-->
+        <scene sceneID="MLt-tv-Peg">
+            <objects>
+                <viewController id="BGH-xZ-XoY" customClass="FontInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y20-IB-ds8"/>
+                        <viewControllerLayoutGuide type="bottom" id="ys1-3k-ey9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mg0-2H-eKM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Include in favorites:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aND-8I-sgo">
+                                <rect key="frame" x="93" y="489" width="150" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gvg-xe-qsS"/>
+                                    <constraint firstAttribute="width" constant="150" id="gws-RA-SCi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Baf-A3-Kkw">
+                                <rect key="frame" x="271" y="527" width="29" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5KI-9u-JRb"/>
+                                    <constraint firstAttribute="width" constant="29" id="PmD-ii-C1f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="Hok-H2-ThM">
+                                <rect key="frame" x="18" y="518" width="247" height="31"/>
+                                <connections>
+                                    <action selector="slideFontSize:" destination="BGH-xZ-XoY" eventType="valueChanged" id="kl0-qV-ajq"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CZQ-A7-3wz">
+                                <rect key="frame" x="251" y="485" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Pyt-de-A4G"/>
+                                    <constraint firstAttribute="width" constant="49" id="fEM-Mv-T0H"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="toggleFavorite:" destination="BGH-xZ-XoY" eventType="valueChanged" id="K9N-Kr-RO3"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVC-hq-R56">
+                                <rect key="frame" x="10" y="80" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CZQ-A7-3wz" secondAttribute="trailing" constant="20" id="Euh-EF-ybn"/>
+                            <constraint firstItem="CZQ-A7-3wz" firstAttribute="leading" secondItem="aND-8I-sgo" secondAttribute="trailing" constant="8" id="IPS-l9-vvH"/>
+                            <constraint firstItem="Hok-H2-ThM" firstAttribute="top" secondItem="CZQ-A7-3wz" secondAttribute="bottom" constant="2" id="KHo-r2-2Bc"/>
+                            <constraint firstItem="Hok-H2-ThM" firstAttribute="top" secondItem="aND-8I-sgo" secondAttribute="bottom" constant="8" id="MCi-kM-PzE"/>
+                            <constraint firstItem="wVC-hq-R56" firstAttribute="top" secondItem="y20-IB-ds8" secondAttribute="bottom" constant="16" id="V4g-WU-TL6"/>
+                            <constraint firstItem="wVC-hq-R56" firstAttribute="leading" secondItem="Mg0-2H-eKM" secondAttribute="leading" constant="10" id="aR5-9M-ynM"/>
+                            <constraint firstAttribute="trailing" secondItem="Baf-A3-Kkw" secondAttribute="trailing" constant="20" id="egT-p6-qlu"/>
+                            <constraint firstItem="Baf-A3-Kkw" firstAttribute="leading" secondItem="Hok-H2-ThM" secondAttribute="trailing" constant="8" id="g6I-1X-aMR"/>
+                            <constraint firstItem="Hok-H2-ThM" firstAttribute="leading" secondItem="Mg0-2H-eKM" secondAttribute="leading" constant="20" id="i6F-Of-rKg"/>
+                            <constraint firstItem="ys1-3k-ey9" firstAttribute="top" secondItem="Baf-A3-Kkw" secondAttribute="bottom" constant="20" id="lxl-xI-3M7"/>
+                            <constraint firstAttribute="trailing" secondItem="wVC-hq-R56" secondAttribute="trailing" constant="10" id="q0Z-M2-0MU"/>
+                            <constraint firstItem="aND-8I-sgo" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wVC-hq-R56" secondAttribute="bottom" constant="10" id="vXg-iA-h3w"/>
+                            <constraint firstItem="ys1-3k-ey9" firstAttribute="top" secondItem="Hok-H2-ThM" secondAttribute="bottom" constant="20" id="xbI-l8-Byp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Def-ZE-fqG"/>
+                    <connections>
+                        <outlet property="favoriteSwitch" destination="CZQ-A7-3wz" id="5cZ-QX-2E5"/>
+                        <outlet property="fontSampleLabel" destination="wVC-hq-R56" id="bVw-Qx-6sh"/>
+                        <outlet property="fontSizeLabel" destination="Baf-A3-Kkw" id="FQX-Ij-ajE"/>
+                        <outlet property="fontSizeSlider" destination="Hok-H2-ThM" id="lso-Os-pkt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLe-nQ-Vq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="1028"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ScL-Qm-Qbh">
             <objects>
@@ -180,4 +268,7 @@
             <point key="canvasLocation" x="-30.399999999999999" y="406.12"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Pbc-rB-4z8"/>
+    </inferredMetricsTieBreakers>
 </document>

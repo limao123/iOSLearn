@@ -9,6 +9,7 @@
 #import "FontListTableViewController.h"
 #import "FavoritesList.h"
 #import "FontSizeTableViewController.h"
+#import "FontInfoViewController.h"
 
 @interface FontListTableViewController ()
 @property (assign, nonatomic) CGFloat cellPointSize;
@@ -74,9 +75,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     UIFont *font = [self fontForDisplayAtIndexPath:indexPath];
-    FontSizeTableViewController *sizesVC = segue.destinationViewController;
-    sizesVC.navigationItem.title = font.fontName;
-    sizesVC.font = font;
+    [segue.destinationViewController navigationItem].title = font.fontName;
+    
+    if ([segue.identifier isEqualToString:@"ShowFontSize"]) {
+        FontSizeTableViewController *sizesVC = segue.destinationViewController;
+        sizesVC.font = font;
+    } else if([segue.identifier isEqualToString:@"ShowFontInfo"]){
+        FontInfoViewController *infoVC = segue.destinationViewController;
+        infoVC.font = font;
+        infoVC.favorite = [[FavoritesList sharedFavoritesList].favorites containsObject:font.fontName];
+    }
+
 }
 
 @end
