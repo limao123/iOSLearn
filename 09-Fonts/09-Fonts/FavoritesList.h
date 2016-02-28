@@ -13,4 +13,5 @@
 - (NSArray *)favorites;
 - (void)addFavorite:(id)item;
 - (void)removeFavorite:(id)item;
+- (void)moveItemAtINdex:(NSInteger)from toIndex:(NSInteger)to;
 @end

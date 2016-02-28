@@ -28,6 +28,10 @@
     
     UIFont *preferredTableViewFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     self.cellPointSize = preferredTableViewFont.pointSize;
+    
+    if (self.showsFavorites) {
+        self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    }
 }
 
 - (UIFont *)fontForDisplayAtIndexPath:(NSIndexPath *)indexPath{
@@ -86,6 +90,31 @@
         infoVC.favorite = [[FavoritesList sharedFavoritesList].favorites containsObject:font.fontName];
     }
 
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return self.showsFavorites;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (!self.showsFavorites) {
+        return;
+    }
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSString *favorite = self.fontNames[indexPath.row];
+        [[FavoritesList sharedFavoritesList] removeFavorite:favorite];
+        //刷新数据
+        self.fontNames = [FavoritesList sharedFavoritesList].favorites;
+        //刷新界面
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
+    //刷新数据
+    [[FavoritesList sharedFavoritesList] moveItemAtINdex:sourceIndexPath.row toIndex:destinationIndexPath.row];
+    self.fontNames = [FavoritesList sharedFavoritesList].favorites;
 }
 
 @end

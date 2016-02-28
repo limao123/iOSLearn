@@ -54,4 +54,11 @@
     [defaults synchronize];
 }
 
+- (void)moveItemAtINdex:(NSInteger)from toIndex:(NSInteger)to{
+    id item = _favorites[from];
+    [_favorites removeObject:item];
+    [_favorites insertObject:item atIndex:to];
+    [self saveFavorite];
+}
+
 @end
