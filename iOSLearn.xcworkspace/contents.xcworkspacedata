@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:13-Persistence/13-Persistence.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:12BridgeControl/12BridgeControl.xcodeproj">
    </FileRef>
    <FileRef
