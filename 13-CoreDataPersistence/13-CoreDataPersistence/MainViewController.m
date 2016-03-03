@@ -45,7 +45,7 @@ static NSString * const kLineTextKey = @"lineText";
 
 - (void)applicationWillResignActive:(NSNotification *)notification{
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSManagedObjectContext *constext = [appDelegate managedObjectContext];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
     NSError *error;
     for (int i = 0; i < 4; i++) {
         UITextField *theField = self.lineFields[i];
@@ -54,7 +54,7 @@ static NSString * const kLineTextKey = @"lineText";
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"(%K = %d)",kLineNumberKey,i];
         [request setPredicate:pred];
         
-        NSArray *objects = [constext executeFetchRequest:request error:&error];
+        NSArray *objects = [context executeFetchRequest:request error:&error];
         if (objects == nil) {
             NSLog(@"There was an error!");
         }
@@ -64,7 +64,7 @@ static NSString * const kLineTextKey = @"lineText";
         if ([objects count] > 0) {
             theLine = [objects objectAtIndex:0];
         } else {
-            theLine = [NSEntityDescription insertNewObjectForEntityForName:kLineEntityName inManagedObjectContext:constext];
+            theLine = [NSEntityDescription insertNewObjectForEntityForName:kLineEntityName inManagedObjectContext:context];
         }
         [theLine setValue:[NSNumber numberWithInt:i] forKey:kLineNumberKey];
         [theLine setValue:theField.text forKey:kLineTextKey];
