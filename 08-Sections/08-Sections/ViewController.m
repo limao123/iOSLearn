@@ -42,8 +42,10 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     }
     
     filteredNames = [NSMutableArray array];
+    //添加搜索栏
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     tableView.tableHeaderView = searchBar;
+    //初始化搜索控制器，delegate和searchResultsDataSource都为viewController
     searchController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar contentsController:self];
     searchController.delegate = self;
     searchController.searchResultsDataSource = self;
@@ -117,10 +119,12 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
 #pragma mark -
 #pragma mark Search Display Delegate Methods
 - (void)searchDisplayController:(UISearchDisplayController *)controller didLoadSearchResultsTableView:(UITableView *)tableView{
+    //显示搜索结果框前注册Cell
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:SectionsTableIdentifier];
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString{
+    //根据关键词进行处理，获得显示数据
     [filteredNames removeAllObjects];
     if (searchString.length > 0) {
         NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(id  _Nonnull evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
