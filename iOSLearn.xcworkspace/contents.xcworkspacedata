@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:KVOTest/KVOTest.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:13-CoreDataPersistence/13-CoreDataPersistence.xcodeproj">
    </FileRef>
    <FileRef
