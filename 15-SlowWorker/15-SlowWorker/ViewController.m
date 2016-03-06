@@ -53,21 +53,35 @@
     self.startButton.enabled = NO;
     [self.spinner startAnimating];
     //使用默认队列来执行新的任务
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
         //将这些耗时的任务都放在默认队列中，这样就不会阻塞主线程
         NSString *fetchedData = [self fetchSomethingFromServer];
         NSString *processedData = [self processData:fetchedData];
-        NSString *firstResult = [self calculateFirstResult:processedData];
-        NSString *secontResult = [self calculateSecondResult:processedData];
-        NSString *resultSummary = [NSString stringWithFormat:@"First:[%@]\nSecond:[%@]",firstResult,secontResult];
-        //UI操作需要使用主线程，在上述任务完成后，转回主线程
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.resultsTextView.text = resultSummary;
-            self.startButton = NO;
-            [self.spinner stopAnimating];
+
+        
+        __block NSString *firstResult;
+        __block NSString *secondResult;
+        dispatch_group_t group = dispatch_group_create();
+        dispatch_group_async(group, queue, ^{
+            firstResult = [self calculateFirstResult:processedData];
         });
-        NSDate *endTime = [NSDate date];
-        NSLog(@"Completed in %f seconds",[endTime timeIntervalSinceDate:startTime]);
+        dispatch_group_async(group, queue, ^{
+            secondResult = [self calculateSecondResult:processedData];
+        });
+        dispatch_group_notify(group, queue, ^{
+            NSString *resultSummary = [NSString stringWithFormat:@"First:[%@]\nSecond:[%@]",firstResult,secondResult];
+            //UI操作需要使用主线程，在上述任务完成后，转回主线程
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.resultsTextView.text = resultSummary;
+                self.startButton = NO;
+                [self.spinner stopAnimating];
+            });
+            NSDate *endTime = [NSDate date];
+            NSLog(@"Completed in %f seconds",[endTime timeIntervalSinceDate:startTime]);
+        });
+        
+
     });
 
 }
