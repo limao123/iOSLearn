@@ -27,16 +27,28 @@
     self.label.textAlignment = NSTextAlignmentCenter;
     self.label.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.label];
-    [self rotateLabelDown];
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-    [center addObserver:self selector:@selector() name:UIApplicationWillResignActiveNotification object:nil];
+    [center addObserver:self selector:@selector(applicationWillResignActive) name:UIApplicationWillResignActiveNotification object:nil];
+    [center addObserver:self selector:@selector(applicationDidBecomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
     
+}
+
+- (void)applicationWillResignActive{
+    NSLog(@"VC:%@",NSStringFromSelector(_cmd));
+    animate = NO;
+}
+
+- (void)applicationDidBecomeActive{
+    NSLog(@"VC: %@", NSStringFromSelector(_cmd));
+    animate = YES;
+    [self rotateLabelDown];
 }
 
 - (void)rotateLabelDown{
     [UIView animateWithDuration:0.5 animations:^{
         self.label.transform = CGAffineTransformMakeRotation(M_PI);
     } completion:^(BOOL finished) {
+        
         [self rotateLabelUp];
     }];
 }
@@ -45,7 +57,10 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.label.transform = CGAffineTransformMakeRotation(0);
     } completion:^(BOOL finished) {
-        [self rotateLabelDown];
+        if (animate) {
+            [self rotateLabelDown];
+        }
+        
     }];
 }
 
