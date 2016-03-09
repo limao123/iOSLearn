@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3878F8EF1C8FFD0D0057AD9B /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = 3878F8EE1C8FFD0D0057AD9B /* smiley.png */; };
 		AB9EDEC11C8D9D9600A132CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9EDEC01C8D9D9600A132CB /* main.m */; };
 		AB9EDEC41C8D9D9600A132CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9EDEC31C8D9D9600A132CB /* AppDelegate.m */; };
 		AB9EDEC71C8D9D9600A132CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9EDEC61C8D9D9600A132CB /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3878F8EE1C8FFD0D0057AD9B /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
 		AB9EDEBC1C8D9D9600A132CB /* 15-StateLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "15-StateLab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9EDEC01C8D9D9600A132CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB9EDEC21C8D9D9600A132CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		AB9EDEBE1C8D9D9600A132CB /* 15-StateLab */ = {
 			isa = PBXGroup;
 			children = (
+				3878F8EE1C8FFD0D0057AD9B /* smiley.png */,
 				AB9EDEC21C8D9D9600A132CB /* AppDelegate.h */,
 				AB9EDEC31C8D9D9600A132CB /* AppDelegate.m */,
 				AB9EDEC51C8D9D9600A132CB /* ViewController.h */,
@@ -136,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3878F8EF1C8FFD0D0057AD9B /* smiley.png in Resources */,
 				AB9EDECF1C8D9D9600A132CB /* LaunchScreen.storyboard in Resources */,
 				AB9EDECC1C8D9D9600A132CB /* Assets.xcassets in Resources */,
 				AB9EDECA1C8D9D9600A132CB /* Main.storyboard in Resources */,
@@ -298,6 +302,7 @@
 				AB9EDED51C8D9D9600A132CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
