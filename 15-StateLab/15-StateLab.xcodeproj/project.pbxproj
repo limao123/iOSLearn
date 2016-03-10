@@ -18,9 +18,9 @@
 
 /* Begin PBXFileReference section */
 		3878F8EE1C8FFD0D0057AD9B /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
+		AB31AABD1C91BA0600B5FC99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AB9EDEBC1C8D9D9600A132CB /* 15-StateLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "15-StateLab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9EDEC01C8D9D9600A132CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AB9EDEC21C8D9D9600A132CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AB9EDEC31C8D9D9600A132CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AB9EDEC51C8D9D9600A132CB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AB9EDEC61C8D9D9600A132CB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -61,9 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				3878F8EE1C8FFD0D0057AD9B /* smiley.png */,
-				AB9EDEC21C8D9D9600A132CB /* AppDelegate.h */,
 				AB9EDEC31C8D9D9600A132CB /* AppDelegate.m */,
 				AB9EDEC51C8D9D9600A132CB /* ViewController.h */,
+				AB31AABD1C91BA0600B5FC99 /* AppDelegate.h */,
 				AB9EDEC61C8D9D9600A132CB /* ViewController.m */,
 				AB9EDEC81C8D9D9600A132CB /* Main.storyboard */,
 				AB9EDECB1C8D9D9600A132CB /* Assets.xcassets */,
