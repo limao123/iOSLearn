@@ -23,11 +23,11 @@
 @implementation ViewController
 
 - (IBAction)shootPictureOrVideo:(id)sender{
-    
+    [self pickMediaFromSource:UIImagePickerControllerSourceTypeCamera];
 }
 
 - (IBAction)selectExistingPictureOrVideo:(id)sender{
-    
+    [self pickMediaFromSource:UIImagePickerControllerSourceTypePhotoLibrary];
 }
 
 - (void)viewDidLoad {
@@ -52,7 +52,7 @@
         [self.moviePlayerController.view removeFromSuperview];
         self.moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:self.movieURL];
         [self.moviePlayerController play];
-        UIIVew *movieView = self.moviePlayerController.view;
+        UIView *movieView = self.moviePlayerController.view;
         movieView.frame = self.imageView.frame;
         movieView.clipsToBounds = YES;
         [self.view addSubview:movieView];
@@ -61,12 +61,67 @@
 }
 
 - (void)pickMediaFromSource:(UIImagePickerControllerSourceType)sourchType{
-    NSArray
+    NSArray *mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:sourchType];
+    if ([UIImagePickerController isSourceTypeAvailable:sourchType] && [mediaTypes count] > 0) {
+        NSArray *mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:sourchType];
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.mediaTypes = mediaTypes;
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = sourchType;
+        [self presentViewController:picker animated:YES completion:NULL];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error accessing media" message:@"Unsupported media source" delegate:nil cancelButtonTitle:@"Drat!" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
+- (UIImage *)shrinkImage:(UIImage *)original toSize:(CGSize)size{
+    UIGraphicsBeginImageContextWithOptions(size, YES, 0);
+    CGFloat originalAspect = original.size.width / original.size.height;
+    CGFloat targetAspect = size.width / size.height;
+    CGRect targetRect;
+    
+    if (originalAspect > targetAspect) {
+        targetRect.size.width = size.width;
+        targetRect.size.height = size.height * targetAspect / originalAspect;
+        targetRect.origin.x = 0;
+        targetRect.origin.y = (size.height - targetRect.size.height) * 0.5;
+    } else if(originalAspect < targetAspect){
+        targetRect.size.width = size.width * originalAspect / targetAspect;
+        targetRect.size.height = size.height;
+        targetRect.origin.x = (size.width - targetRect.size.width) * 0.5;
+        targetRect.origin.y = 0;
+    } else {
+        targetRect = CGRectMake(0, 0, size.width, size.height);
+    }
+    
+    [original drawInRect:targetRect];
+    UIImage *final = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndPDFContext();
+    return final;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    self.lastChosenMediaType = info[UIImagePickerControllerMediaType];
+    if ([self.lastChosenMediaType isEqualToString:(NSString *)kUTTypeImage]) {
+        UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+        self.image = [self shrinkImage:chosenImage toSize:self.imageView.bounds.size];
+        
+    } else if([self.lastChosenMediaType isEqualToString:(NSString *)kUTTypeMovie]){
+        self.movieURL = info[UIImagePickerControllerMediaURL];
+    }
+    
+    [picker dismissModalViewControllerAnimated:YES];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissModalViewControllerAnimated:YES];
 }
 
 @end
