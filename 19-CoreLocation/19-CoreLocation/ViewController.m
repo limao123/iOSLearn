@@ -8,17 +8,19 @@
 
 #import "ViewController.h"
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @interface ViewController ()<CLLocationManagerDelegate>
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *previousPoint;
 @property (assign, nonatomic) CLLocationDistance totalMovementDistance;
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *longtitudeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *horizontalAccuracyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *altitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *verticalAccuracyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceTraveledLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @end
 
 @implementation ViewController
@@ -32,6 +34,10 @@
     //表示提供最佳精度
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [self.locationManager startUpdatingLocation];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
+        [self.locationManager requestWhenInUseAuthorization];  //调用了这句,就会弹出允许框了.
+    }
+    self.mapView.showsUserLocation = YES;
 }
 
 #pragma mark - CLLocationManagerDelegate Methods
@@ -77,7 +83,7 @@
     if (self.previousPoint == nil) {
         self.totalMovementDistance = 0;
         
-        BIDPlace *start = [[BIDPlace alloc] init];
+        Place *start = [[Place alloc] init];
         start.coordinate = newLocation.coordinate;
         start.title = @"Start Point";
         start.subtitle = @"This is where we started!";

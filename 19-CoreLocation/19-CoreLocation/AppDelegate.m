@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <MapKit/MapKit.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+//    // 判斷是否 iOS 8
+//    if([locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+//        [locationManager requestAlwaysAuthorization]; // 永久授权
+//        [locationManager requestWhenInUseAuthorization]; //使用中授权
+//    }
+//    [locationManager startUpdatingLocation];
     return YES;
 }
 

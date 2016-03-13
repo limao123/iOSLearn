@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Place.h"
 
 @interface ViewController : UIViewController
 

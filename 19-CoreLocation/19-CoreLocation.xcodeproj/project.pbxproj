@@ -15,6 +15,7 @@
 		3812C1881C92C170006C5ADF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3812C1861C92C170006C5ADF /* LaunchScreen.storyboard */; };
 		3812C1931C92C170006C5ADF /* _9_CoreLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3812C1921C92C170006C5ADF /* _9_CoreLocationTests.m */; };
 		3812C19E1C92C170006C5ADF /* _9_CoreLocationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3812C19D1C92C170006C5ADF /* _9_CoreLocationUITests.m */; };
+		38E7D0BA1C950EB900B2859B /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E7D0B91C950EB900B2859B /* Place.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		3812C1991C92C170006C5ADF /* 19-CoreLocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "19-CoreLocationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3812C19D1C92C170006C5ADF /* _9_CoreLocationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _9_CoreLocationUITests.m; sourceTree = "<group>"; };
 		3812C19F1C92C170006C5ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38E7D0B81C950EB900B2859B /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
+		38E7D0B91C950EB900B2859B /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				3812C17E1C92C170006C5ADF /* ViewController.h */,
 				3812C17F1C92C170006C5ADF /* ViewController.m */,
 				3812C1811C92C170006C5ADF /* Main.storyboard */,
+				38E7D0B81C950EB900B2859B /* Place.h */,
+				38E7D0B91C950EB900B2859B /* Place.m */,
 				3812C1841C92C170006C5ADF /* Assets.xcassets */,
 				3812C1861C92C170006C5ADF /* LaunchScreen.storyboard */,
 				3812C1891C92C170006C5ADF /* Info.plist */,
@@ -273,6 +278,7 @@
 				3812C1801C92C170006C5ADF /* ViewController.m in Sources */,
 				3812C17D1C92C170006C5ADF /* AppDelegate.m in Sources */,
 				3812C17A1C92C170006C5ADF /* main.m in Sources */,
+				38E7D0BA1C950EB900B2859B /* Place.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +504,7 @@
 				3812C1A41C92C170006C5ADF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3812C1A51C92C170006C5ADF /* Build configuration list for PBXNativeTarget "19-CoreLocationTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +513,7 @@
 				3812C1A71C92C170006C5ADF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3812C1A81C92C170006C5ADF /* Build configuration list for PBXNativeTarget "19-CoreLocationUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +522,7 @@
 				3812C1AA1C92C170006C5ADF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
