@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MultithreadDemo/MultithreadDemo.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:19-CoreLocation/19-CoreLocation.xcodeproj">
    </FileRef>
    <FileRef
