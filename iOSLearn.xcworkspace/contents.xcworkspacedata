@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SVProgressHUDDemo/SVProgressHUDDemo.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Animation/Animation.xcodeproj">
    </FileRef>
    <FileRef
