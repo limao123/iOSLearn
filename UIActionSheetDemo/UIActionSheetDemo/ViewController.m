@@ -48,6 +48,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+//点击事件
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     switch (buttonIndex) {
         case 1:
@@ -67,12 +69,17 @@
     }
 }
 
+//取消按键回调
 - (void)actionSheetCancel:(UIActionSheet *)actionSheet{
     NSLog(@"取消");
 }
+
+//view消失后的回调
 -(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
     
 }
+
+//view消失前的回调
 -(void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex{
     
 }
