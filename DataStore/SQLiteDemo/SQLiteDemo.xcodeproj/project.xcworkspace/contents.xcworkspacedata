@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:YouShiTest.xcodeproj">
+      location = "self:SQLiteDemo.xcodeproj">
    </FileRef>
 </Workspace>

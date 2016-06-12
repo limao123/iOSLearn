@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  YouShiTest
+//  SQLiteDemo
 //
-//  Created by bmob-LT on 16/6/8.
-//  Copyright © 2016年 bmob-LT. All rights reserved.
+//  Created by 林涛 on 16/6/10.
+//  Copyright © 2016年 limaofuyuanzhang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

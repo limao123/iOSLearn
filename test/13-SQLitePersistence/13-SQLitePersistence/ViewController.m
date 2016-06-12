@@ -37,7 +37,8 @@
     NSString *query = @"SELECT ROW, FIELD_DATA FROM FIELDS ORDER BY ROW;";
     sqlite3_stmt *statement;
     if (sqlite3_prepare_v2(database, [query UTF8String], -1, &statement, nil) == SQLITE_OK) {
-        while (sqlite3_step(statement) == SQLITE_OK) {
+        int status = sqlite3_step(statement);
+        while (status == SQLITE_OK) {
             int row = sqlite3_column_int(statement, 0);
             char *rowData = (char *)sqlite3_column_text(statement, 1);
             NSString *fieldValue = [[NSString alloc] initWithUTF8String:rowData];
