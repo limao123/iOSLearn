@@ -21,9 +21,14 @@
     //    [self createDataBase];
     //    [self saveData];
     //    [self getData];
-    [self createTable:@"CREATE TABLE IF NOT EXISTS User (username text, objectId text,unique (objectId))"];
-    [self createTable:@"CREATE TABLE IF NOT EXISTS Problem (problem text,answer text,source text,objectId text,unique (objectId))"];
-    [self createTable:@"CREATE TABLE IF NOT EXISTS FavouriteProblem (p_user text,p_problem text)"];
+    [self createTable:@"CREATE TABLE IF NOT EXISTS User"
+     @"(username text, objectId text,unique (objectId))"];
+    [self createTable:@"CREATE TABLE IF NOT EXISTS Problem"
+     @"(problem text,answer text,source int,sourceNumber int,widthType int, smallType int,objectId text,unique (objectId))"];
+    [self createTable:@"CREATE TABLE IF NOT EXISTS FavouriteProblem"
+     @"(p_user text,p_problem text,objectId text,unique (objectId))"];
+    [self createTable:@"CREATE TABLE IF NOT EXISTS WrongProblem"
+     @"(p_user text,p_problem text,objectId text,unique (objectId))"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,8 +110,6 @@
         sqlite3_close(database);
         NSAssert(0,@"Failed to open database");
     }
-    
-    
     
     //从表中读取数据
     NSString *query = @"SELECT ROW, FIELD_DATA FROM FIELDS ORDER BY ROW;";
