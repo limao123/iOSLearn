@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Model.h"
+#import "MyView.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    Model *model = [[Model alloc] init];
+    model.icon = @"alien";
+    model.name = @"alien";
+    MyView *view = [MyView appViewWithModel:model];
+    view.frame = CGRectMake(0, 0, 200, 400);
+    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {

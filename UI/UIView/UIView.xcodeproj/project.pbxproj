@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B12BB8E1D1247DF00B0916A /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B12BB8D1D1247DF00B0916A /* Model.m */; };
+		1B12BB911D12488B00B0916A /* MyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B12BB901D12488B00B0916A /* MyView.xib */; };
 		1B7273071CFD24960059F30A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7273061CFD24960059F30A /* main.m */; };
 		1B72730A1CFD24960059F30A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7273091CFD24960059F30A /* AppDelegate.m */; };
 		1B72730D1CFD24960059F30A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B72730C1CFD24960059F30A /* ViewController.m */; };
@@ -15,7 +17,7 @@
 		1B7273151CFD24960059F30A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7273131CFD24960059F30A /* LaunchScreen.storyboard */; };
 		1B7273201CFD24960059F30A /* UIViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B72731F1CFD24960059F30A /* UIViewTests.m */; };
 		1B72732B1CFD24960059F30A /* UIViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B72732A1CFD24960059F30A /* UIViewUITests.m */; };
-		1B72733A1CFD29F20059F30A /* MyVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7273391CFD29F20059F30A /* MyVIew.m */; };
+		1B72733A1CFD29F20059F30A /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7273391CFD29F20059F30A /* MyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B12BB8C1D1247DF00B0916A /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		1B12BB8D1D1247DF00B0916A /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		1B12BB901D12488B00B0916A /* MyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyView.xib; sourceTree = "<group>"; };
 		1B7273021CFD24960059F30A /* UIView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7273061CFD24960059F30A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1B7273081CFD24960059F30A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,8 +57,8 @@
 		1B7273261CFD24960059F30A /* UIViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B72732A1CFD24960059F30A /* UIViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewUITests.m; sourceTree = "<group>"; };
 		1B72732C1CFD24960059F30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B7273381CFD29F20059F30A /* MyVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVIew.h; sourceTree = "<group>"; };
-		1B7273391CFD29F20059F30A /* MyVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyVIew.m; sourceTree = "<group>"; };
+		1B7273381CFD29F20059F30A /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		1B7273391CFD29F20059F30A /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B12BB8F1D1247EA00B0916A /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				1B12BB8C1D1247DF00B0916A /* Model.h */,
+				1B12BB8D1D1247DF00B0916A /* Model.m */,
+				1B7273381CFD29F20059F30A /* MyView.h */,
+				1B7273391CFD29F20059F30A /* MyView.m */,
+				1B12BB901D12488B00B0916A /* MyView.xib */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
 		1B7272F91CFD24960059F30A = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +121,7 @@
 		1B7273041CFD24960059F30A /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				1B12BB8F1D1247EA00B0916A /* CustomView */,
 				1B7273081CFD24960059F30A /* AppDelegate.h */,
 				1B7273091CFD24960059F30A /* AppDelegate.m */,
 				1B72730B1CFD24960059F30A /* ViewController.h */,
@@ -113,8 +131,6 @@
 				1B7273131CFD24960059F30A /* LaunchScreen.storyboard */,
 				1B7273161CFD24960059F30A /* Info.plist */,
 				1B7273051CFD24960059F30A /* Supporting Files */,
-				1B7273381CFD29F20059F30A /* MyVIew.h */,
-				1B7273391CFD29F20059F30A /* MyVIew.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -248,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B12BB911D12488B00B0916A /* MyView.xib in Resources */,
 				1B7273151CFD24960059F30A /* LaunchScreen.storyboard in Resources */,
 				1B7273121CFD24960059F30A /* Assets.xcassets in Resources */,
 				1B7273101CFD24960059F30A /* Main.storyboard in Resources */,
@@ -275,10 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B72733A1CFD29F20059F30A /* MyVIew.m in Sources */,
+				1B72733A1CFD29F20059F30A /* MyView.m in Sources */,
 				1B72730D1CFD24960059F30A /* ViewController.m in Sources */,
 				1B72730A1CFD24960059F30A /* AppDelegate.m in Sources */,
 				1B7273071CFD24960059F30A /* main.m in Sources */,
+				1B12BB8E1D1247DF00B0916A /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +522,7 @@
 				1B7273311CFD24960059F30A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B7273321CFD24960059F30A /* Build configuration list for PBXNativeTarget "UIViewTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +531,7 @@
 				1B7273341CFD24960059F30A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B7273351CFD24960059F30A /* Build configuration list for PBXNativeTarget "UIViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +540,7 @@
 				1B7273371CFD24960059F30A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
