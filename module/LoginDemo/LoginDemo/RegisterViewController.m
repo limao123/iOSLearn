@@ -7,12 +7,35 @@
 //
 
 #import "RegisterViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import "BindMobilePhoneViewController.h"
 
 @interface RegisterViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *mobilePhoneTf;
+
+@property (weak, nonatomic) IBOutlet UITextField *passwordTf;
+@property (weak, nonatomic) IBOutlet UITextField *repeatPassworddTf;
 
 @end
 
 @implementation RegisterViewController
+
+- (IBAction)registerButtonClicked:(id)sender {
+    AVUser *user = [[AVUser alloc] init];
+    user.username = self.mobilePhoneTf.text;
+    user.password = self.passwordTf.text;
+    user.mobilePhoneNumber = self.mobilePhoneTf.text;
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error) {
+            NSLog(@"%@",error);
+        } else {
+            //注册成功，跳转绑定手机
+            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoginAndRegister" bundle:nil];
+            BindMobilePhoneViewController *bindMobilePhoneVC = [storyBoard instantiateViewControllerWithIdentifier:@"bindMobilePhoneVC"];
+            [self.navigationController pushViewController:bindMobilePhoneVC animated:YES];
+        }
+    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

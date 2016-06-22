@@ -1,29 +1,29 @@
 //
-//  LoginViewController.m
+//  BindMobilePhoneViewController.m
 //  LoginDemo
 //
-//  Created by bmob-LT on 16/6/22.
+//  Created by 林涛 on 16/6/22.
 //  Copyright © 2016年 bmob-LT. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "BindMobilePhoneViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 
-@interface LoginViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *mobilePhoneTf;
-
-@property (weak, nonatomic) IBOutlet UITextField *passwardTf;
+@interface BindMobilePhoneViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumberTf;
+@property (weak, nonatomic) IBOutlet UITextField *smsCodeTf;
 
 @end
 
-@implementation LoginViewController
+@implementation BindMobilePhoneViewController
 
-- (IBAction)loginButtonClicked:(id)sender {
-    [AVUser logInWithMobilePhoneNumberInBackground:self.mobilePhoneTf.text password:self.passwardTf.text block:^(AVUser *user, NSError *error) {
-        if (error) {
-            NSLog(@"%@",error);
+- (IBAction)bindPhoneNumberButtonClicked:(id)sender {
+    [AVUser verifyMobilePhone:self.smsCodeTf.text withBlock:^(BOOL succeeded, NSError *error) {
+        //验证结果
+        if (succeeded) {
+            NSLog(@"bind succeeded");
         } else {
-            NSLog(@"login success");
+            NSLog(@"%@",error);
         }
     }];
 }
