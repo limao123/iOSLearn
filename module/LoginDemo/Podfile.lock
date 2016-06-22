@@ -1,0 +1,13 @@
+PODS:
+  - AVOSCloud (3.3.3)
+  - SVProgressHUD (2.0.3)
+
+DEPENDENCIES:
+  - AVOSCloud
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  AVOSCloud: dcd8a24c219971400146fe09638d218cfc8bb7f1
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+
+COCOAPODS: 0.39.0
