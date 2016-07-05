@@ -28,13 +28,83 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 //    [self solveThreadBlock];
-    [self mutilThread];
+//    [self mutilThread];
+//    [self createThread];
+//    [self multiThread];
+//    [self threadState];
+    [self runObjectThread];
 }
 
+//创建线程
+- (void)createThread {
+    //建立线程，可以带一个参数
+    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(runThread:) object:@"run thread"];
+    //使用线程
+    [thread start];
+    
+    [NSThread detachNewThreadSelector:@selector(runThread:) toTarget:self withObject:@"run thread"];
+}
+
+- (void)runThread:(id)object{
+    NSLog(@"%@",object);
+}
+
+//线程优先级
+- (void)multiThread {
+    for (int i = 0; i < 100; i++) {
+        NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(runThread:) object:[NSNumber numberWithInt:i]];
+        thread.name = [NSString stringWithFormat:@"thread %d",i,nil];
+        //改变线程优先级，
+        thread.threadPriority = 1.0-(i/(double)100);
+        [thread start];
+    }
+}
+
+- (void)runMultiThread:(NSNumber *)index{
+    NSLog(@"thread %@",index);
+}
+
+//线程状态
+- (void)threadState {
+    //建立线程，可以带一个参数
+    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(runThreadState) object:nil];
+    //使用线程
+    [thread start];
+}
+
+- (void)runThreadState{
+    NSThread *thread = [NSThread currentThread];
+    //此处使用cancel并不会真正终止线程，仅仅是改变线程标识
+    [thread cancel];
+    if (thread.isCancelled) {
+        NSLog(@"cancel");
+        //只有调用exit方法才能终止线程
+        [NSThread exit];
+    } else {
+        //没有取消时继续做下载操作等
+        NSLog(@"load data");
+    }
+    
+    NSLog(@"打印说明线程没有终止");
+}
+
+//NSObject分类扩展方法
+- (void)objectThread{
+    [self performSelector:@selector(runObjectThread) withObject:nil];
+}
+
+- (void)runObjectThread{
+    NSLog(@"run thread");
+}
+
+//其它
+- (void)threadSleep{
+    [NSThread sleepForTimeInterval:1];
+}
 
 # pragma mark - 多线程并发
 
-- (void)mutilThread{
+- (void)multiThread1{
     _imageViews=[NSMutableArray array];
     for (int r=0; r<ROW_COUNT; r++) {
         for (int c=0; c<COLUMN_COUNT; c++) {
@@ -163,14 +233,6 @@
     UIImage *image = [UIImage imageWithData:imageData];
     self.imageView.image = image;
 }
-
-
-
-
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
