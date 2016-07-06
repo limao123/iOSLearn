@@ -18,6 +18,8 @@
 
     
     // Line Chart No.1
+    [self.lineChart setYLabels:@[@"20", @"40", @"60", @"80",@"100"] ];
+
     NSArray * data01Array = @[@60.1, @160.1, @126.4, @262.2, @186.2];
     PNLineChartData *data01 = [PNLineChartData new];
     data01.color = PNFreshGreen;
