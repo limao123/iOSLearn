@@ -31,22 +31,23 @@
 //    [self mutilThread];
 //    [self createThread];
 //    [self multiThread];
-//    [self threadState];
-    [self runObjectThread];
+    [self threadState];
+//    [self runObjectThread];
 }
 
 //创建线程
 - (void)createThread {
     //建立线程，可以带一个参数
     NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(runThread:) object:@"run thread"];
+    NSLog(@"%@",[NSThread currentThread]);
     //使用线程
     [thread start];
     
-    [NSThread detachNewThreadSelector:@selector(runThread:) toTarget:self withObject:@"run thread"];
+//    [NSThread detachNewThreadSelector:@selector(runThread:) toTarget:self withObject:@"run thread"];
 }
 
 - (void)runThread:(id)object{
-    NSLog(@"%@",object);
+    NSLog(@"%@ %@",[NSThread currentThread],object);
 }
 
 //线程优先级
@@ -55,7 +56,7 @@
         NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(runThread:) object:[NSNumber numberWithInt:i]];
         thread.name = [NSString stringWithFormat:@"thread %d",i,nil];
         //改变线程优先级，
-        thread.threadPriority = 1.0-(i/(double)100);
+        thread.threadPriority = i/(double)100;
         [thread start];
     }
 }
@@ -79,7 +80,7 @@
     if (thread.isCancelled) {
         NSLog(@"cancel");
         //只有调用exit方法才能终止线程
-        [NSThread exit];
+//        [NSThread exit];
     } else {
         //没有取消时继续做下载操作等
         NSLog(@"load data");

@@ -20,10 +20,10 @@
     // Line Chart No.1
     [self.lineChart setYLabels:@[@"20", @"40", @"60", @"80",@"100"] ];
 
-    NSArray * data01Array = @[@60.1, @160.1, @126.4, @262.2, @186.2];
+    NSArray * data01Array = @[@1, @2, @3, @4, @5,@5, @160.1, @126.4, @262.2, @186.2];
     PNLineChartData *data01 = [PNLineChartData new];
     data01.color = PNFreshGreen;
-    data01.itemCount = self.lineChart.xLabels.count;
+    data01.itemCount = self.lineChart.xLabels.count*2;
     data01.getData = ^(NSUInteger index) {
         CGFloat yValue = [data01Array[index] floatValue];
         return [PNLineChartDataItem dataItemWithY:yValue];
