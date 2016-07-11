@@ -17,15 +17,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self threadTest];
 //    [self serialSyn];
 //    [self serialAsyn];
-    [self concurrencySyn];
+//    [self concurrencySyn];
 //    [self concurrencyAsyn];
+//    [self deallock];
+//    [self deadlock3];
+//    [self deadlock4];
 
 }
 
-//串行同步，在当前线程按进入顺序执行每一个任务
+- (void)threadTest{
+    [NSThread detachNewThreadSelector:@selector(serialSyn) toTarget:self withObject:nil];
+}
+
+//同步串行，在当前线程按进入顺序执行每一个任务
 - (void)serialSyn{
+    
     NSLog(@"串行同步");
     dispatch_queue_t queue = dispatch_queue_create("serialSyn", DISPATCH_QUEUE_SERIAL);
     dispatch_sync(queue, ^{
@@ -40,12 +49,12 @@
         [self printThreadMsg];
         NSLog(@"task 3");
     });
+    NSLog(@"串行同步后");
 }
 
 /*
-串行异步，在其它线程按进入顺序执行每一个任务，要注意的是，在串行队列中的异步任务会开辟一个新线
-程执行，但并没有异步的效果，任务仍然会阻塞当前线程。跟我理解的不一样，我以为是不会开辟新线程，但
- 任务不会阻塞当前线程，具体原因要看GCD是怎么实现的，初步估计是因为GCD的异步就是通过多线程来实现的。
+异步串行，异步不会阻塞当前代线程，此处就不会阻塞主线程，而三个任务是放在串行队列中，必须先完成上
+ 一个任务才会执行下一个任务。
  */
 - (void)serialAsyn{
 
@@ -71,8 +80,7 @@
 }
 
 /*
- 并发同步，直接在当前线程按顺序执行每一个任务，并不会开辟新线程，跟我理解的不太一样，我是以为会在
- 多个线程中执行，只是这些任务是同步的。
+同步并发，
  */
 - (void)concurrencySyn{
      NSLog(@"并发同步");
@@ -125,6 +133,40 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)deallock{
+    NSLog(@"1"); // 任务1
+    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        NSLog(@"2"); // 任务2
+        NSLog(@"%@",[NSThread currentThread]);
+    });
+    NSLog(@"3"); // 任务3
+}
+
+- (void)deadlock3{
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
+    NSLog(@"1 %@",[NSThread currentThread]); // 任务1
+    dispatch_async(queue, ^{
+        NSLog(@"2 %@",[NSThread currentThread]); // 任务2
+        dispatch_sync(queue, ^{
+            NSLog(@"3 %@",[NSThread currentThread]); // 任务3
+        });
+        NSLog(@"4 %@",[NSThread currentThread]); // 任务4
+    });
+    NSLog(@"5 %@",[NSThread currentThread]); // 任务5
+}
+
+- (void)deadlock4{
+    NSLog(@"1 %@",[NSThread currentThread]); // 任务1
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"2 %@",[NSThread currentThread]); // 任务2
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            NSLog(@"3 %@",[NSThread currentThread]); // 任务3
+        });
+        NSLog(@"4 %@",[NSThread currentThread]); // 任务4
+    });
+    NSLog(@"5 %@",[NSThread currentThread]); // 任务5
 }
 
 @end

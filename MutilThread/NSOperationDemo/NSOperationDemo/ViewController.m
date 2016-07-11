@@ -22,7 +22,9 @@
 //    [self userNSInvocationOperation];
 //    [self userNSBlockOperation];
 //    [self setMaxConcurrentOperationCount];
-    [self setOperaionOrder];
+//    [self notSetOperationOrder];
+//    [self setOperaionOrder];
+    [self setOperaionOrderCycle];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +45,7 @@
 }
 
 - (void)userNSInvocationOperation1{
-    //start，会在主线程中执行，一般不用访方法
+    //start，会在主线程中执行，一般该用访方法
     NSInvocationOperation *invocationOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(runNSInvocationOperation) object:nil];
     [invocationOperation start];
     
@@ -100,26 +102,62 @@
     }
 }
 
+- (void)notSetOperationOrder{
+    NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
+    NSBlockOperation *op1 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"op1 current thread %@",[NSThread currentThread]);
+    }];
+    NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"op2 current thread %@",[NSThread currentThread]);
+    }];
+    NSBlockOperation *op3 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"op3 current thread %@",[NSThread currentThread]);
+    }];
+    [operationQueue addOperation:op1];
+    [operationQueue addOperation:op2];
+    [operationQueue addOperation:op3];
+}
+
 - (void)setOperaionOrder{
     NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
     NSBlockOperation *op1 = [NSBlockOperation blockOperationWithBlock:^{
-        NSLog(@"op1");
+        NSLog(@"op1 current thread %@",[NSThread currentThread]);
     }];
     NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
-        NSLog(@"op2");
+        NSLog(@"op2 current thread %@",[NSThread currentThread]);
     }];
     NSBlockOperation *op3 = [NSBlockOperation blockOperationWithBlock:^{
-        NSLog(@"op3");
+        NSLog(@"op3 current thread %@",[NSThread currentThread]);
+    }];
+    
+    [op2 addDependency:op1];
+    [op3 addDependency:op2];
+
+    [operationQueue addOperation:op1];
+    [operationQueue addOperation:op2];
+    [operationQueue addOperation:op3];
+}
+
+- (void)setOperaionOrderCycle{
+    NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
+    NSBlockOperation *op1 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"op1 current thread %@",[NSThread currentThread]);
+    }];
+    NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"op2 current thread %@",[NSThread currentThread]);
+    }];
+    NSBlockOperation *op3 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"op3 current thread %@",[NSThread currentThread]);
     }];
     
     [op2 addDependency:op1];
     [op3 addDependency:op2];
     //循环依赖会造成这些互相依赖的操作都无法执行
-//    [op1 addDependency:op3];
+    [op1 addDependency:op3];
+    
     [operationQueue addOperation:op1];
     [operationQueue addOperation:op2];
     [operationQueue addOperation:op3];
-    
 }
 
 
