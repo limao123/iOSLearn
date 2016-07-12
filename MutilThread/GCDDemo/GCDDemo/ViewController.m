@@ -17,13 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self threadTest];
+//    [self threadTest];
 //    [self serialSyn];
-//    [self serialAsyn];
 //    [self concurrencySyn];
+//        [self serialAsyn];
 //    [self concurrencyAsyn];
-//    [self deallock];
-//    [self deadlock3];
+//    [self test];
+//    [self deadlock1];
+    [self deadlock3];
 //    [self deadlock4];
 
 }
@@ -32,92 +33,89 @@
     [NSThread detachNewThreadSelector:@selector(serialSyn) toTarget:self withObject:nil];
 }
 
-//同步串行，在当前线程按进入顺序执行每一个任务
+//串行同步，在当前线程按进入顺序执行每一个任务
 - (void)serialSyn{
-    
-    NSLog(@"串行同步");
     dispatch_queue_t queue = dispatch_queue_create("serialSyn", DISPATCH_QUEUE_SERIAL);
-    dispatch_sync(queue, ^{
-        [self printThreadMsg];
-        NSLog(@"task 1");
-    });
-    dispatch_sync(queue, ^{
-        [self printThreadMsg];
-        NSLog(@"task 2");
-    });
-    dispatch_sync(queue, ^{
-        [self printThreadMsg];
-        NSLog(@"task 3");
-    });
-    NSLog(@"串行同步后");
+    dispatch_block_t task1 = ^{
+        NSLog(@"task1 run");
+    };
+    dispatch_sync(queue,task1);
+    
+    dispatch_block_t task2 =  ^{
+        NSLog(@"task2 run");
+    };
+    dispatch_sync(queue,task2);
+    
+    dispatch_block_t task3 =  ^{
+        NSLog(@"task3 run");
+    };
+    dispatch_sync(queue, task3);
 }
 
 /*
-异步串行，异步不会阻塞当前代线程，此处就不会阻塞主线程，而三个任务是放在串行队列中，必须先完成上
+ 并发同步
+ */
+- (void)concurrencySyn{
+    dispatch_queue_t queue = dispatch_queue_create("concurrencySyn", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_block_t task1 = ^{
+        NSLog(@"task1 run");
+    };
+    dispatch_sync(queue,task1);
+    
+    dispatch_block_t task2 = ^{
+        NSLog(@"task2 run");
+    };
+    dispatch_sync(queue,task2);
+    
+    dispatch_block_t task3 = ^{
+        NSLog(@"task3 run");
+    };
+    dispatch_sync(queue, task3);
+}
+
+/*
+串行异步，异步不会阻塞当前代线程，此处就不会阻塞主线程，而三个任务是放在串行队列中，必须先完成上
  一个任务才会执行下一个任务。
  */
 - (void)serialAsyn{
-
-    NSLog(@"串行异步");
     dispatch_queue_t queue = dispatch_queue_create("serialAsyn", DISPATCH_QUEUE_SERIAL);
-    dispatch_async(queue, ^{
-        for (NSUInteger i = 0; i < 1000000000; i++) {
-        }
-        NSLog(@"%@",[NSThread currentThread]);
-        NSLog(@"task 1");
-    });
-    dispatch_async(queue, ^{
-        for (NSUInteger i = 0; i < 500000000; i++) {
-            
-        }
-        NSLog(@"%@",[NSThread currentThread]);
-        NSLog(@"task 2");
-    });
-    dispatch_async(queue, ^{
-        NSLog(@"%@",[NSThread currentThread]);
-        NSLog(@"task 3");
-    });
+    dispatch_block_t task1 = ^{
+        NSLog(@"task1 run");
+    };
+    dispatch_async(queue,task1);
+    
+    dispatch_block_t task2 =  ^{
+        NSLog(@"task2 run");
+    };
+    dispatch_async(queue,task2);
+    
+    dispatch_block_t task3 =  ^{
+        NSLog(@"task3 run");
+    };
+    dispatch_async(queue, task3);
 }
 
-/*
-同步并发，
- */
-- (void)concurrencySyn{
-     NSLog(@"并发同步");
-    dispatch_queue_t queue = dispatch_queue_create("serialSyn", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-   
-         [self printThreadMsg];
-        NSLog(@"%@",[NSThread currentThread]);
-        NSLog(@"task 1");
-    });
-    dispatch_sync(queue, ^{
-        [self printThreadMsg];
-        NSLog(@"task 2");
-    });
-    dispatch_sync(queue, ^{
-        [self printThreadMsg];
-        NSLog(@"%@",[NSThread currentThread]);
-        NSLog(@"task 3");
-    });
-}
+
 
 //并发异步，没有疑问，在1个或多个线程中执行
 - (void)concurrencyAsyn{
-    NSLog(@"并发异步");
-    dispatch_queue_t queue = dispatch_queue_create("serialSyn", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_async(queue, ^{
-        [self printThreadMsg];
-        NSLog(@"task 1");
-    });
-    dispatch_async(queue, ^{
-        [self printThreadMsg];
-        NSLog(@"task 2");
-    });
-    dispatch_async(queue, ^{
-        [self printThreadMsg];
-        NSLog(@"task 3");
-    });
+    dispatch_queue_t queue = dispatch_queue_create("concurrencyAsyn", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_block_t task1 = ^{
+        NSLog(@"task1 run");
+    };
+    dispatch_async(queue,task1);
+    
+    dispatch_block_t task2 = ^{
+        NSLog(@"task2 run");
+    };
+    dispatch_async(queue, task2);
+    
+    dispatch_block_t task3 = ^{
+        NSLog(@"task3 run");
+    };
+    dispatch_async(queue,task3);
 }
 
 //打印当前线程消息
@@ -130,31 +128,60 @@
     }
 }
 
+- (void)systemQueue{
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_queue_t systemQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)deallock{
-    NSLog(@"1"); // 任务1
-    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        NSLog(@"2"); // 任务2
-        NSLog(@"%@",[NSThread currentThread]);
-    });
-    NSLog(@"3"); // 任务3
+- (void)test{
+    [NSThread detachNewThreadSelector:@selector(deadlock1) toTarget:self withObject:nil];
+}
+
+- (void)deadlock1{
+    
+//    NSLog(@"1");
+//    dispatch_sync(dispatch_get_main_queue(), ^{
+//        NSLog(@"2");
+//    });
+//    NSLog(@"3");
+    
+    NSLog(@"1");
+    dispatch_block_t task =  ^{
+        NSLog(@"2");
+    };
+    dispatch_sync(dispatch_get_main_queue(),task);
+    NSLog(@"3");
 }
 
 - (void)deadlock3{
-    dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
-    NSLog(@"1 %@",[NSThread currentThread]); // 任务1
-    dispatch_async(queue, ^{
-        NSLog(@"2 %@",[NSThread currentThread]); // 任务2
-        dispatch_sync(queue, ^{
-            NSLog(@"3 %@",[NSThread currentThread]); // 任务3
-        });
-        NSLog(@"4 %@",[NSThread currentThread]); // 任务4
-    });
-    NSLog(@"5 %@",[NSThread currentThread]); // 任务5
+//    dispatch_queue_t queue = dispatch_queue_create("serialQueue", DISPATCH_QUEUE_SERIAL);
+//    NSLog(@"1");
+//    dispatch_async(queue, ^{
+//        NSLog(@"2");
+//        dispatch_sync(queue, ^{
+//            NSLog(@"3");
+//        });
+//        NSLog(@"4");
+//    });
+//    NSLog(@"5");
+    
+    dispatch_queue_t queue = dispatch_queue_create("serialQueue", DISPATCH_QUEUE_SERIAL);
+    NSLog(@"1");
+    dispatch_block_t task = ^{
+         NSLog(@"2");
+        dispatch_block_t inTask =  ^{
+            NSLog(@"3");
+        };
+        dispatch_sync(queue,inTask);
+        NSLog(@"4");
+    };
+    dispatch_async(queue,task);
+    NSLog(@"5");
 }
 
 - (void)deadlock4{
