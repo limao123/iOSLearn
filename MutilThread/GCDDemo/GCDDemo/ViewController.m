@@ -24,8 +24,13 @@
 //    [self concurrencyAsyn];
 //    [self test];
 //    [self deadlock1];
-    [self deadlock3];
+//    [self deadlock3];
 //    [self deadlock4];
+//    [self applyDemo];
+//    [self onceDemo];
+//    [self barrierDemo];
+    [self groupDemo];
+
 
 }
 
@@ -133,14 +138,11 @@
     dispatch_queue_t systemQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)test{
     [NSThread detachNewThreadSelector:@selector(deadlock1) toTarget:self withObject:nil];
 }
+
+
 
 - (void)deadlock1{
     
@@ -194,6 +196,60 @@
         NSLog(@"4 %@",[NSThread currentThread]); // 任务4
     });
     NSLog(@"5 %@",[NSThread currentThread]); // 任务5
+}
+
+//执行多次
+- (void)applyDemo{
+    dispatch_apply(5, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(size_t index) {
+        NSLog(@"%zu",index);
+    });
+}
+
+- (void)onceDemo{
+    //token用于识别是否运行过，初始值为0，我的理解是在执行任务是会将token值改成非0，下次再传递时遇到带非0值token的任务则不执行。
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSLog(@"run once");
+    });
+    
+    dispatch_once(&onceToken, ^{
+        NSLog(@"run once");
+    });
+}
+
+- (void)barrierDemo{
+    //1、2打印顺序不定，但barrier一定会在1,2之后才打印，3、4在barrier打印后再打印，3、4打印顺序不定。
+    dispatch_queue_t queue = dispatch_queue_create("barrierConcurrent", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^(){
+        NSLog(@"1");
+    });
+    dispatch_async(queue, ^(){
+        NSLog(@"2");
+    });
+    dispatch_barrier_async(queue, ^(){
+        NSLog(@"barrier");
+    });
+    dispatch_async(queue, ^(){
+        NSLog(@"3");
+    });
+    dispatch_async(queue, ^(){
+        NSLog(@"4");
+    });
+}
+
+- (void)groupDemo{
+    //1、2放进组里，3需要等group里面的任务执行完才会执行，1、2顺序不定
+    dispatch_queue_t queue = dispatch_queue_create("conturrent", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, queue, ^(){
+        NSLog(@"1");
+    });
+    dispatch_group_async(group, queue, ^(){
+        NSLog(@"2");
+    });
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^(){
+        NSLog(@"3");
+    });
 }
 
 @end

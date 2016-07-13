@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MyView.h"
+#import "UIScrollView+UITouch.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -20,6 +21,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.view.tag = 10;
+    UIScrollView *view = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    view.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {

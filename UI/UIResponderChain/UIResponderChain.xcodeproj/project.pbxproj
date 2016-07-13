@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BAB02531D361E1F00132984 /* UIScrollView+UITouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAB02521D361E1F00132984 /* UIScrollView+UITouch.m */; };
 		ABBE83041D3528D800C71225 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBE83031D3528D800C71225 /* main.m */; };
 		ABBE83071D3528D800C71225 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBE83061D3528D800C71225 /* AppDelegate.m */; };
 		ABBE830A1D3528D800C71225 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBE83091D3528D800C71225 /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BAB02511D361E1F00132984 /* UIScrollView+UITouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+UITouch.h"; sourceTree = "<group>"; };
+		1BAB02521D361E1F00132984 /* UIScrollView+UITouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+UITouch.m"; sourceTree = "<group>"; };
 		ABBE82FF1D3528D800C71225 /* UIResponderChain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIResponderChain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBE83031D3528D800C71225 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ABBE83051D3528D800C71225 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +80,8 @@
 				ABBE831A1D352A3400C71225 /* MyTableView.m */,
 				ABBE831F1D35318E00C71225 /* MyView.h */,
 				ABBE83201D35318E00C71225 /* MyView.m */,
+				1BAB02511D361E1F00132984 /* UIScrollView+UITouch.h */,
+				1BAB02521D361E1F00132984 /* UIScrollView+UITouch.m */,
 			);
 			path = UIResponderChain;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				ABBE83071D3528D800C71225 /* AppDelegate.m in Sources */,
 				ABBE83041D3528D800C71225 /* main.m in Sources */,
 				ABBE83211D35318E00C71225 /* MyView.m in Sources */,
+				1BAB02531D361E1F00132984 /* UIScrollView+UITouch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +318,7 @@
 				ABBE83181D3528D800C71225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
