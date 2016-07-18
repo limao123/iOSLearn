@@ -36,24 +36,32 @@
 //NSInvocationOperation
 - (void)userNSInvocationOperation{
     //标准用法
-    NSInvocationOperation *invocationOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(runNSInvocationOperation) object:nil];
+    NSInvocationOperation *invocationOperation =
+    [[NSInvocationOperation alloc] initWithTarget:self
+                                         selector:@selector(runNSInvocationOperation)
+                                           object:nil];
+    
     //将操作放进队列中运行，会另外开辟线程运行
     NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];
     [operationQueue addOperation:invocationOperation];
-    
-    
 }
 
 - (void)userNSInvocationOperation1{
     //start，会在主线程中执行，一般该用访方法
-    NSInvocationOperation *invocationOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(runNSInvocationOperation) object:nil];
+    NSInvocationOperation *invocationOperation =
+    [[NSInvocationOperation alloc] initWithTarget:self
+                                         selector:@selector(runNSInvocationOperation)
+                                           object:nil];
     [invocationOperation start];
     
 }
 
 - (void)userNSInvocationOperation2{
     //运行完的操作如果放进队列中会报错
-    NSInvocationOperation *invocationOperation = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(runNSInvocationOperation) object:nil];
+    NSInvocationOperation *invocationOperation =
+    [[NSInvocationOperation alloc] initWithTarget:self
+                                         selector:@selector(runNSInvocationOperation)
+                                           object:nil];
     [invocationOperation start];
     //将操作放进队列中运行，会另外开辟线程运行
     NSOperationQueue *operationQueue = [[NSOperationQueue alloc] init];

@@ -20,7 +20,7 @@
 //    [self threadTest];
 //    [self serialSyn];
 //    [self concurrencySyn];
-//        [self serialAsyn];
+//    [self serialAsyn];
 //    [self concurrencyAsyn];
 //    [self test];
 //    [self deadlock1];
@@ -29,7 +29,7 @@
 //    [self applyDemo];
 //    [self onceDemo];
 //    [self barrierDemo];
-    [self groupDemo];
+//    [self groupDemo];
 
 
 }
