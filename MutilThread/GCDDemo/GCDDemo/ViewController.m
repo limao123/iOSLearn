@@ -24,7 +24,7 @@
 //    [self concurrencyAsyn];
 //    [self test];
 //    [self deadlock1];
-//    [self deadlock3];
+    [self deadlock3];
 //    [self deadlock4];
 //    [self applyDemo];
 //    [self onceDemo];

@@ -20,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 //    [self userNSInvocationOperation];
+//    [self userNSInvocationOperation1];
 //    [self userNSBlockOperation];
 //    [self setMaxConcurrentOperationCount];
 //    [self notSetOperationOrder];
