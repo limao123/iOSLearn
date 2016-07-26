@@ -14,6 +14,15 @@
 @end
 
 @implementation ViewController
+- (IBAction)refreshBtn:(id)sender {
+    [self.dataMArr removeAllObjects];
+    for (int i = 0;i < 9; i++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld",(long)1]];
+        NSString *title = [NSString stringWithFormat:@"{0,%ld}",(long)i+1];
+        [self.dataMArr addObject:@{@"image":image,@"title":title}];
+    }
+    [self.myCollectionView reloadData];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
