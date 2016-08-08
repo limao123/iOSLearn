@@ -18,8 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
+    //有效
     [btn setTitle:@"test" forState:UIControlStateNormal];
-    
+    //无效
+//    btn.titleLabel.text = @"xxx";
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.view addSubview:btn];
 }
