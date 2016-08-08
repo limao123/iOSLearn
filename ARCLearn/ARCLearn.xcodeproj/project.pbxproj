@@ -15,6 +15,7 @@
 		1B2FFAF11D52EA610049C454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B2FFAEF1D52EA610049C454 /* LaunchScreen.storyboard */; };
 		1B2FFAFC1D52EA610049C454 /* ARCLearnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2FFAFB1D52EA610049C454 /* ARCLearnTests.m */; };
 		1B2FFB071D52EA610049C454 /* ARCLearnUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2FFB061D52EA610049C454 /* ARCLearnUITests.m */; };
+		ABD601041D55CB89003D6B29 /* NSFakeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD601031D55CB89003D6B29 /* NSFakeObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		1B2FFB021D52EA610049C454 /* ARCLearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARCLearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2FFB061D52EA610049C454 /* ARCLearnUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARCLearnUITests.m; sourceTree = "<group>"; };
 		1B2FFB081D52EA610049C454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABD601021D55CB89003D6B29 /* NSFakeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSFakeObject.h; sourceTree = "<group>"; };
+		ABD601031D55CB89003D6B29 /* NSFakeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSFakeObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				1B2FFAEF1D52EA610049C454 /* LaunchScreen.storyboard */,
 				1B2FFAF21D52EA610049C454 /* Info.plist */,
 				1B2FFAE11D52EA610049C454 /* Supporting Files */,
+				ABD601021D55CB89003D6B29 /* NSFakeObject.h */,
+				ABD601031D55CB89003D6B29 /* NSFakeObject.m */,
 			);
 			path = ARCLearn;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABD601041D55CB89003D6B29 /* NSFakeObject.m in Sources */,
 				1B2FFAE91D52EA610049C454 /* ViewController.m in Sources */,
 				1B2FFAE61D52EA610049C454 /* AppDelegate.m in Sources */,
 				1B2FFAE31D52EA610049C454 /* main.m in Sources */,
@@ -498,6 +504,7 @@
 				1B2FFB0D1D52EA610049C454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B2FFB0E1D52EA610049C454 /* Build configuration list for PBXNativeTarget "ARCLearnTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +513,7 @@
 				1B2FFB101D52EA610049C454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B2FFB111D52EA610049C454 /* Build configuration list for PBXNativeTarget "ARCLearnUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +522,7 @@
 				1B2FFB131D52EA610049C454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
