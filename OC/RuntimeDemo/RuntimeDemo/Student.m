@@ -28,7 +28,7 @@
 //自动生成setter/getter方法
 
 @synthesize name;
-
+@synthesize nickname;
 
 
 //------------------手动----------------------//

@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
 
-@interface Student : NSObject<PersonDelegate>
-
+@interface Student : Person<PersonDelegate>
+@property (nonatomic,copy) NSString *nickname;
 @end

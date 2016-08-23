@@ -15,5 +15,5 @@
 @end
 
 @interface Person : NSObject
-
+@property (nonatomic,copy) NSString *nickname;
 @end
