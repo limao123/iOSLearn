@@ -16,6 +16,7 @@
 		1B2D81D61D0667C100D0FF61 /* UINavigationVCDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2D81D51D0667C100D0FF61 /* UINavigationVCDemoTests.m */; };
 		1B2D81E11D0667C100D0FF61 /* UINavigationVCDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2D81E01D0667C100D0FF61 /* UINavigationVCDemoUITests.m */; };
 		1BD4E4901D06B18000E3F5EE /* NavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BD4E48F1D06B18000E3F5EE /* NavigationVC.m */; };
+		AB5ECBB61D6F2B9A00E52817 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5ECBB51D6F2B9A00E52817 /* MyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		1B2D81E21D0667C100D0FF61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BD4E48E1D06B18000E3F5EE /* NavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationVC.h; sourceTree = "<group>"; };
 		1BD4E48F1D06B18000E3F5EE /* NavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationVC.m; sourceTree = "<group>"; };
+		AB5ECBB41D6F2B9A00E52817 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		AB5ECBB51D6F2B9A00E52817 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 		1B2D81BA1D0667C100D0FF61 /* UINavigationVCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AB5ECBB41D6F2B9A00E52817 /* MyViewController.h */,
+				AB5ECBB51D6F2B9A00E52817 /* MyViewController.m */,
 				1BD4E48E1D06B18000E3F5EE /* NavigationVC.h */,
 				1BD4E48F1D06B18000E3F5EE /* NavigationVC.m */,
 				1B2D81BE1D0667C100D0FF61 /* AppDelegate.h */,
@@ -279,6 +284,7 @@
 				1B2D81C01D0667C100D0FF61 /* AppDelegate.m in Sources */,
 				1BD4E4901D06B18000E3F5EE /* NavigationVC.m in Sources */,
 				1B2D81BD1D0667C100D0FF61 /* main.m in Sources */,
+				AB5ECBB61D6F2B9A00E52817 /* MyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
