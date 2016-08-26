@@ -7,12 +7,19 @@
 //
 
 #import "ViewController.h"
+#import "MyViewController.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+- (IBAction)jump:(id)sender {
+//    MyViewController *myVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"MyVC"];
+//    [self.navigationController pushViewController:myVC animated:YES];
+    //MyViewController *myVC2 = [ ]
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,6 +69,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [segue.identifier isEqualToString:@"MyVCJump"];
+    
+    
 }
 
 @end
