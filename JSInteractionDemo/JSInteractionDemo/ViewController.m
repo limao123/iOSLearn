@@ -8,27 +8,68 @@
 
 #import "ViewController.h"
 #import <JavaScriptCore/JavaScriptCore.h>
-
+#import "WebViewJavascriptBridge.h"
 #import "MyJSObject.h"
 
-@interface ViewController ()
+@interface ViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
-@property (weak, nonatomic) IBOutlet UILabel *localLabel;
-@property (strong,nonatomic) JSContext *context;
+@property (strong,nonatomic) WebViewJavascriptBridge *bridge;
+@property (weak, nonatomic) IBOutlet UILabel *nativeLabel;
+
 @end
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    if (_bridge) {
+        return;
+    }
+    [WebViewJavascriptBridge enableLogging];
+    
+    _bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
+    [_bridge setWebViewDelegate:self];
+    
+    //注册一个给JS调用的方法
+    [self.bridge registerHandler:@"ObjC Echo" handler:^(id data, WVJBResponseCallback responseCallback) {
+        //显示来自JS的消息
+        self.nativeLabel.text = [NSString stringWithFormat:@"来自JS的消息:%@",data];
+        //发送一个回复给JS
+        responseCallback(@"好的JS，我已经收到了");
+    }];
+    
+
+    
+
+    
+    [self loadExamplePage:self.webView];
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didCreateJSContext:) name:@"DidCreateContextNotification" object:nil];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
-//    NSString *path = @"www.baidu.com";
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:path]];
-    [self.webView loadRequest:request];
+    //初始化WebViewJavascriptBridge
+
+
     
+}
+
+- (IBAction)callJS:(id)sender {
+    //调用JS的一个方法
+//    [self.bridge callHandler:@"JS Echo" data:@"JS 我发了一个消息给你" responseCallback:^(id responseData) {
+//        //显示JS的回复
+//        self.nativeLabel.text =  [NSString stringWithFormat:@"来自JS的回复:%@",responseData];
+//    }];
     
+//    [self.bridge callHandler:@"JS Echo" data:@{@"key":@"value"} responseCallback:^(id responseData) {
+//        //显示JS的回复
+//        self.nativeLabel.text =  [NSString stringWithFormat:@"来自JS的回复:%@",responseData];
+//    }];
+    
+    [self.bridge callHandler:@"JS Echo" data:@[@"a1",@"a2"] responseCallback:^(id responseData) {
+        //显示JS的回复
+        self.nativeLabel.text =  [NSString stringWithFormat:@"来自JS的回复:%@",responseData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,40 +77,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)sendMsgAction:(id)sender {
-
+- (void)loadExamplePage:(UIWebView*)webView {
+    NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"ExampleApp" ofType:@"html"];
+    NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
+    NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
+    [webView loadHTMLString:appHtml baseURL:baseURL];
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-
-    
-//    [webView stringByEvaluatingJavaScriptFromString:@"myFunction();"];
-    JSContext *context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    MyJSObject *jsObject = [MyJSObject new];
-    context[@"ttf"] = jsObject;    //将对象注入这个context中
-//
-//    context[@"passValue"] = ^{
-//        
-//        NSArray *arg = [JSContext currentArguments];
-//        for (id obj in arg) {
-//            NSLog(@"%@", obj);
-//        }
-//    };
-    
-}
-
-- (void)didCreateJSContext:(NSNotification *)notification {
-    NSString *indentifier = [NSString stringWithFormat:@"indentifier%lud", (unsigned long)self.webView.hash];
-    NSString *indentifierJS = [NSString stringWithFormat:@"var %@ = '%@'", indentifier, indentifier];
-    [self.webView stringByEvaluatingJavaScriptFromString:indentifierJS];
-    
-    JSContext *context = notification.object;
-    //判断这个context是否属于当前这个webView
-    if (![context[indentifier].toString isEqualToString:indentifier]) return;
-    
-    _context = context;        //如果属于这个webView
-    MyJSObject *jsObject = [MyJSObject new];
-    _context[@"ttf"] = jsObject;    //将对象注入这个context中
-}
 
 @end

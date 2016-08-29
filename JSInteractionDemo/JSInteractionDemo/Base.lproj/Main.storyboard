@@ -28,10 +28,10 @@
                                 <rect key="frame" x="125" y="530" width="60" height="30"/>
                                 <state key="normal" title="发送消息"/>
                                 <connections>
-                                    <action selector="sendMsgAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bl7-Et-YK2"/>
+                                    <action selector="callJS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MQS-hE-qjo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="本地" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPx-zF-EGV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="本地接收JS的消息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPx-zF-EGV">
                                 <rect key="frame" x="0.0" y="441" width="320" height="81"/>
                                 <color key="backgroundColor" red="0.72941176470000002" green="0.54117647059999996" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -42,7 +42,7 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="localLabel" destination="jPx-zF-EGV" id="Tbn-dI-GfF"/>
+                        <outlet property="nativeLabel" destination="jPx-zF-EGV" id="T3G-ba-NtY"/>
                         <outlet property="webView" destination="tJj-Ox-JjF" id="mbS-y4-ahz"/>
                     </connections>
                 </viewController>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <form action="action_page.php">
+            <p id="readFromOC">显示OC发送过来的消息</p>
+            <button id="sendToOC" >点击发送消息给OC</button>
+            
+        </form>
+        
+        <script>
+            //初始化
+            function setupWebViewJavascriptBridge(callback) {
+                if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+                if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+                window.WVJBCallbacks = [callback];
+                var WVJBIframe = document.createElement('iframe');
+                WVJBIframe.style.display = 'none';
+                WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+                document.documentElement.appendChild(WVJBIframe);
+                setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+            }
+        
+        
+        setupWebViewJavascriptBridge(function(bridge) {
+                                     
+                                     /* Initialize your app here */
+                                     
+                                     //js提供给OC调用的方法，方法名为JS Echo
+                                     bridge.registerHandler('JS Echo', function(data, responseCallback) {
+                                                            //调用OC返回的数据，可进行必要的数据处理
+                                                            
+                                                            //字符串
+                                                            //document.getElementById("readFromOC").innerHTML= "来自OC的消息:" + data;
+                                                            
+                                                            //JSON
+                                                            // document.getElementById("readFromOC").innerHTML= data.key;
+                                                            
+                                                            //数组
+                                                            document.getElementById("readFromOC").innerHTML= data[0];
+                                                            
+                                                            
+                                                            //发送一个回复给OC，相当于一个函数的return
+                                                            responseCallback("好的OC，我已经收到了");
+                                    });
+                                     
+                                     
+                                     
+                                     //jS调用OC方法,方法名为ObjC Echo
+                                     var callbackButton = document.getElementById("sendToOC");
+                                     callbackButton.onclick = function(e) {
+                                     
+                                     /*
+                                      bridge.callHandler('ObjC Echo', "OC 我发了一条消息给你", function responseCallback(responseData) {
+                                      //得到来自OC的值，相当于返回值
+                                      document.getElementById("readFromOC").innerHTML= "来自OC的回复:" + responseData;
+                                      });
+                                      
+                                      }
+                                      */
+                                     
+                                     // callbackButton.onclick = function(e) {
+                                     // bridge.callHandler('ObjC Echo', {'key': 'val'}, function responseCallback(responseData) {
+                                     //                    //得到来自OC的值，相当于返回值
+                                     //                    document.getElementById("readFromOC").innerHTML= "来自OC的回复:" + responseData;
+                                     //                    });
+                                     
+                                     // }
+                                     
+                                     
+                                      callbackButton.onclick = function(e) {
+                                      	bridge.callHandler('ObjC Echo', new Array("a1","a2"), function responseCallback(responseData) {
+                                      	//得到来自OC的值，相当于返回值
+                                      	document.getElementById("readFromOC").innerHTML= "来自OC的回复:" + responseData;
+                                      	});
+                                      }
+                                    }
+            })
+                                     
+            </script>
+        
+    </body>
+</html>
+
+
