@@ -24,11 +24,11 @@
 //    [self concurrencyAsyn];
 //    [self test];
 //    [self deadlock1];
-    [self deadlock3];
+//    [self deadlock3];
 //    [self deadlock4];
 //    [self applyDemo];
 //    [self onceDemo];
-//    [self barrierDemo];
+    [self barrierDemo];
 //    [self groupDemo];
 
 
@@ -218,8 +218,12 @@
 }
 
 - (void)barrierDemo{
+    
     //1、2打印顺序不定，但barrier一定会在1,2之后才打印，3、4在barrier打印后再打印，3、4打印顺序不定。
     dispatch_queue_t queue = dispatch_queue_create("barrierConcurrent", DISPATCH_QUEUE_CONCURRENT);
+    //不能使用global queue，否则会失效
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
     dispatch_async(queue, ^(){
         NSLog(@"1");
     });
