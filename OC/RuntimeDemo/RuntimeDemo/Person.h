@@ -14,6 +14,6 @@
 
 @end
 
-@interface Person : NSObject
-@property (nonatomic,copy) NSString *nickname;
+@interface Person : NSObject<PersonDelegate>
+
 @end

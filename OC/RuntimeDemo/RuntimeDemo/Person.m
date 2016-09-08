@@ -8,6 +8,22 @@
 
 #import "Person.h"
 
-@implementation Person
+@interface Person (){
+//    NSString *_name;
+}
 
+@end
+
+@implementation Person
+@synthesize name;
+
+//@dynamic name;
+
+//- (void)setName:(NSString *)name {
+//    _name = name;
+//}
+//
+//- (NSString *)name {
+//    return _name;
+//}
 @end

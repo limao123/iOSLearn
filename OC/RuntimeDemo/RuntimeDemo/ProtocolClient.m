@@ -13,9 +13,13 @@
 @implementation ProtocolClient
 
 + (void)use {
-    Student *student = [[Student alloc] init];
-    student.name = @"彭爸爸";
-    NSLog(@"%@", student.name);
+//    Student *student = [[Student alloc] init];
+//    student.name = @"彭爸爸";
+//    NSLog(@"%@", student.name);
+    
+    Person *person = [[Person alloc] init];
+    person.name = @"a";
+    NSLog(@"%@",person.name);
 }
 
 @end
