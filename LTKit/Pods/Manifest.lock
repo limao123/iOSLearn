@@ -1,0 +1,16 @@
+PODS:
+  - BmobSDK (1.7.2)
+  - Masonry (1.0.1)
+  - XXNibBridge (2.3.1)
+
+DEPENDENCIES:
+  - BmobSDK
+  - Masonry
+  - XXNibBridge
+
+SPEC CHECKSUMS:
+  BmobSDK: e188cb31d6a8417ab668aee821da227d7512b865
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
+
+COCOAPODS: 0.39.0

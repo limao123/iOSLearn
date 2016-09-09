@@ -1,0 +1,12 @@
+target "LTKit" do
+pod ‘BmobSDK’
+pod 'XXNibBridge'
+pod 'Masonry'
+end
+
+target "LTLab" do
+pod ‘BmobSDK’
+pod 'XXNibBridge'
+pod 'Masonry'
+end
+
