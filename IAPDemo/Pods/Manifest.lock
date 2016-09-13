@@ -1,0 +1,10 @@
+PODS:
+  - IAPHelper (1.0.9)
+
+DEPENDENCIES:
+  - IAPHelper
+
+SPEC CHECKSUMS:
+  IAPHelper: e994287a6ab3cf6169efb4a09f7207d4dc413acf
+
+COCOAPODS: 0.39.0
