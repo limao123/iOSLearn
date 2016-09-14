@@ -380,12 +380,20 @@
 		1B84B8E31D796C0C00F69233 /* 基础题 */ = {
 			isa = PBXGroup;
 			children = (
+				1BD073751D894BF500290455 /* 6 */,
 				1B84B8E41D796C3300F69233 /* ExamViewController.h */,
 				1B84B8E51D796C3300F69233 /* ExamViewController.m */,
 				1B1658ED1D7ED716005E18A8 /* ExamNonARCViewController.h */,
 				1B1658EE1D7ED716005E18A8 /* ExamNonARCViewController.m */,
 			);
 			name = "基础题";
+			sourceTree = "<group>";
+		};
+		1BD073751D894BF500290455 /* 6 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = 6;
 			sourceTree = "<group>";
 		};
 		6F767390B67902988062B6F8 /* Frameworks */ = {
