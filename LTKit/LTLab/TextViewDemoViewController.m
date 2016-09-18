@@ -7,15 +7,15 @@
 //
 
 #import "TextViewDemoViewController.h"
-#import "LTTextFiled.h"
+#import "LTTextField.h"
 
 @interface TextViewDemoViewController ()
-@property (weak, nonatomic) IBOutlet LTTextFiled *defaultLTTf;
-@property (weak, nonatomic) IBOutlet LTTextFiled *iconLTTf;
-@property (weak, nonatomic) IBOutlet LTTextFiled *buttonLTTf;
-@property (weak, nonatomic) IBOutlet LTTextFiled *iconAndButtonLTTf;
-@property (weak, nonatomic) IBOutlet LTTextFiled *keyValueLTTf;
-@property (weak, nonatomic) IBOutlet LTTextFiled *keyValueAndButtonLTTf;
+@property (weak, nonatomic) IBOutlet LTTextField *defaultLTTf;
+@property (weak, nonatomic) IBOutlet LTTextField *iconLTTf;
+@property (weak, nonatomic) IBOutlet LTTextField *buttonLTTf;
+@property (weak, nonatomic) IBOutlet LTTextField *iconAndButtonLTTf;
+@property (weak, nonatomic) IBOutlet LTTextField *keyValueLTTf;
+@property (weak, nonatomic) IBOutlet LTTextField *keyValueAndButtonLTTf;
 
 @end
 

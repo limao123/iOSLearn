@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UISegmentedControl (LTAdd)
-- (void)setPureSegmentedControlWithAttributeStrings:(NSArray<NSDictionary *> *)attributeStrings;
+- (void)setPureSegmentedControlWithStringAttribute:(NSArray<NSDictionary *> *)attributeStrings;
 @end

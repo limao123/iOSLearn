@@ -6,17 +6,17 @@
 //  Copyright © 2016年 bmob-LT. All rights reserved.
 //
 
-#import "LTTextFiled.h"
+#import "LTTextField.h"
 #import "Masonry.h"
 #import "UIColor+LTAdd.h"
 #import "CALayer+LTAdd.h"
 
-@interface LTTextFiled()
+@interface UITextField()
 
 
 @end
 
-@implementation LTTextFiled
+@implementation LTTextField
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -45,6 +45,8 @@
         self.layer.borderColorFromUIColor = [UIColor colorWithHexString:@"c8c8c8" alpha:1];
         
         self.viewStyle = style;
+        
+        self.sec = 60;
        
     }
     return self;
@@ -244,7 +246,7 @@
 }
 
 - (void)startTime {
-    __block int timeout=60; //倒计时时间
+    __block int timeout= self.sec; //倒计时时间
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
     dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行

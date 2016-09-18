@@ -45,7 +45,7 @@ typedef  NS_ENUM(NSUInteger,LTTextFieldButtonStyle){
 
 typedef void(^ButtonAction)();
 
-@interface LTTextFiled : UIView
+@interface LTTextField : UIView
 @property (strong,nonatomic) UILabel *keyLabel;
 
 
@@ -61,7 +61,9 @@ typedef void(^ButtonAction)();
 @property (copy,nonatomic) ButtonAction buttonBlock;
 
 
-@property (unsafe_unretained,nonatomic)  LTTextFieldStyle viewStyle;
+@property (unsafe_unretained,nonatomic) LTTextFieldStyle viewStyle;
+
+@property (unsafe_unretained,nonatomic) NSUInteger sec; //倒计时的秒数，默认60s
 
 - (instancetype)initWithStyle:(LTTextFieldStyle)style;
 @end

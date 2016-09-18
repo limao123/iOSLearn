@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     UISegmentedControl *pureSC = [[UISegmentedControl alloc] initWithItems:@[@"第一",@"第二"]];
     [pureSC setFrame:CGRectMake(10, 84, 100, 100)];
-    [pureSC setPureSegmentedControlWithAttributeStrings:@[@{NSFontAttributeName : [UIFont systemFontOfSize:16.0f],NSForegroundColorAttributeName : [UIColor grayColor]},@{NSFontAttributeName : [UIFont boldSystemFontOfSize:20.0f],NSForegroundColorAttributeName : [UIColor redColor]}]];
+    [pureSC setPureSegmentedControlWithStringAttribute:@[@{NSFontAttributeName : [UIFont systemFontOfSize:16.0f],NSForegroundColorAttributeName : [UIColor grayColor]},@{NSFontAttributeName : [UIFont boldSystemFontOfSize:20.0f],NSForegroundColorAttributeName : [UIColor redColor]}]];
     [self.view addSubview:pureSC];
 }
 

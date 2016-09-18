@@ -9,7 +9,7 @@
 #import "UISegmentedControl+LTAdd.h"
 
 @implementation UISegmentedControl (LTAdd)
-- (void)setPureSegmentedControlWithAttributeStrings:(NSArray<NSDictionary *> *)attributeStrings {
+- (void)setPureSegmentedControlWithStringAttribute:(NSArray<NSDictionary *> *)attributeStrings {
     self.tintColor = [UIColor clearColor];
     
     if (attributeStrings.count < 2) {

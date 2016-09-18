@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		1B1658EF1D7ED716005E18A8 /* ExamNonARCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1658EE1D7ED716005E18A8 /* ExamNonARCViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		1B35FEC71D8116EA0084F930 /* LTTextFiled.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B35FEC61D8116EA0084F930 /* LTTextFiled.m */; };
+		1B35FEC71D8116EA0084F930 /* LTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B35FEC61D8116EA0084F930 /* LTTextField.m */; };
 		1B35FEC91D8117440084F930 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B35FEC81D8117440084F930 /* podfile */; };
 		1B35FECA1D8117440084F930 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B35FEC81D8117440084F930 /* podfile */; };
 		1B35FECE1D8148EA0084F930 /* CALayer+LTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B35FECD1D8148EA0084F930 /* CALayer+LTAdd.m */; };
 		1B35FED21D815DA40084F930 /* UIImage+LTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B35FED11D815DA40084F930 /* UIImage+LTAdd.m */; };
 		1B35FED51D815E780084F930 /* UIDemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B35FED41D815E780084F930 /* UIDemoTableViewController.m */; };
 		1B35FEDB1D815F460084F930 /* UIImageViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B35FEDA1D815F460084F930 /* UIImageViewDemoViewController.m */; };
+		1B5BD6251D8E6C7300D7469F /* UIButton+LTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5BD6241D8E6C7300D7469F /* UIButton+LTAdd.m */; };
+		1B5BD6271D8E741700D7469F /* ButtonImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B5BD6261D8E741700D7469F /* ButtonImage.xcassets */; };
+		1B5BD62A1D8E755400D7469F /* UIButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5BD6291D8E755400D7469F /* UIButtonViewController.m */; };
+		1B5BD62E1D8E7BA600D7469F /* UIComponentsDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5BD62D1D8E7BA600D7469F /* UIComponentsDemoViewController.m */; };
+		1B5BD6301D8E7FA800D7469F /* Components.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B5BD62F1D8E7FA800D7469F /* Components.xcassets */; };
 		1B5EA2B01D77CA3F00F4E716 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EA2AF1D77CA3F00F4E716 /* main.m */; };
 		1B5EA2B31D77CA3F00F4E716 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EA2B21D77CA3F00F4E716 /* AppDelegate.m */; };
 		1B5EA2B61D77CA3F00F4E716 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EA2B51D77CA3F00F4E716 /* ViewController.m */; };
@@ -39,6 +44,7 @@
 		1B7EBD3E1D7811F400710109 /* ImageTextFiled.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B7EBD3D1D7811F400710109 /* ImageTextFiled.xib */; };
 		1B84B8E01D791D1D00F69233 /* UISegmentedControlDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84B8DF1D791D1D00F69233 /* UISegmentedControlDemoViewController.m */; };
 		1B84B8E61D796C3400F69233 /* ExamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84B8E51D796C3300F69233 /* ExamViewController.m */; };
+		1BBDC7B31D8E997300331449 /* RuntimeDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBDC7B21D8E997300331449 /* RuntimeDemoViewController.m */; };
 		1BEDEC721D82559A00669624 /* TextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEDEC711D82559A00669624 /* TextViewDemoViewController.m */; };
 		1BEDEC731D825A9D00669624 /* UIColor+LTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7EBD281D78108E00710109 /* UIColor+LTAdd.m */; };
 		2C514E1B0C7EFC1891F50B51 /* libPods-LTLab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D33793F4AF803AD9C65AE655 /* libPods-LTLab.a */; };
@@ -80,8 +86,8 @@
 /* Begin PBXFileReference section */
 		1B1658ED1D7ED716005E18A8 /* ExamNonARCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamNonARCViewController.h; sourceTree = "<group>"; };
 		1B1658EE1D7ED716005E18A8 /* ExamNonARCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamNonARCViewController.m; sourceTree = "<group>"; };
-		1B35FEC51D8116EA0084F930 /* LTTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTextFiled.h; sourceTree = "<group>"; };
-		1B35FEC61D8116EA0084F930 /* LTTextFiled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTextFiled.m; sourceTree = "<group>"; };
+		1B35FEC51D8116EA0084F930 /* LTTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTextField.h; sourceTree = "<group>"; };
+		1B35FEC61D8116EA0084F930 /* LTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTextField.m; sourceTree = "<group>"; };
 		1B35FEC81D8117440084F930 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
 		1B35FECC1D8148EA0084F930 /* CALayer+LTAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+LTAdd.h"; sourceTree = "<group>"; };
 		1B35FECD1D8148EA0084F930 /* CALayer+LTAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+LTAdd.m"; sourceTree = "<group>"; };
@@ -91,6 +97,14 @@
 		1B35FED41D815E780084F930 /* UIDemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDemoTableViewController.m; sourceTree = "<group>"; };
 		1B35FED91D815F460084F930 /* UIImageViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewDemoViewController.h; sourceTree = "<group>"; };
 		1B35FEDA1D815F460084F930 /* UIImageViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewDemoViewController.m; sourceTree = "<group>"; };
+		1B5BD6231D8E6C7300D7469F /* UIButton+LTAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LTAdd.h"; sourceTree = "<group>"; };
+		1B5BD6241D8E6C7300D7469F /* UIButton+LTAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LTAdd.m"; sourceTree = "<group>"; };
+		1B5BD6261D8E741700D7469F /* ButtonImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ButtonImage.xcassets; sourceTree = "<group>"; };
+		1B5BD6281D8E755400D7469F /* UIButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIButtonViewController.h; sourceTree = "<group>"; };
+		1B5BD6291D8E755400D7469F /* UIButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonViewController.m; sourceTree = "<group>"; };
+		1B5BD62C1D8E7BA600D7469F /* UIComponentsDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIComponentsDemoViewController.h; sourceTree = "<group>"; };
+		1B5BD62D1D8E7BA600D7469F /* UIComponentsDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIComponentsDemoViewController.m; sourceTree = "<group>"; };
+		1B5BD62F1D8E7FA800D7469F /* Components.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Components.xcassets; sourceTree = "<group>"; };
 		1B5EA2AB1D77CA3F00F4E716 /* LTKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B5EA2AF1D77CA3F00F4E716 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1B5EA2B11D77CA3F00F4E716 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,6 +156,8 @@
 		1B84B8DF1D791D1D00F69233 /* UISegmentedControlDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISegmentedControlDemoViewController.m; sourceTree = "<group>"; };
 		1B84B8E41D796C3300F69233 /* ExamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamViewController.h; sourceTree = "<group>"; };
 		1B84B8E51D796C3300F69233 /* ExamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamViewController.m; sourceTree = "<group>"; };
+		1BBDC7B11D8E997300331449 /* RuntimeDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeDemoViewController.h; sourceTree = "<group>"; };
+		1BBDC7B21D8E997300331449 /* RuntimeDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoViewController.m; sourceTree = "<group>"; };
 		1BEDEC701D82559A00669624 /* TextViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewDemoViewController.h; sourceTree = "<group>"; };
 		1BEDEC711D82559A00669624 /* TextViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewDemoViewController.m; sourceTree = "<group>"; };
 		442AD5661431738949C65CA5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +240,28 @@
 			name = UIImageView;
 			sourceTree = "<group>";
 		};
+		1B5BD6221D8E6BD500D7469F /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				1B5BD6231D8E6C7300D7469F /* UIButton+LTAdd.h */,
+				1B5BD6241D8E6C7300D7469F /* UIButton+LTAdd.m */,
+				1B5BD6261D8E741700D7469F /* ButtonImage.xcassets */,
+				1B5BD6281D8E755400D7469F /* UIButtonViewController.h */,
+				1B5BD6291D8E755400D7469F /* UIButtonViewController.m */,
+			);
+			name = UIButton;
+			sourceTree = "<group>";
+		};
+		1B5BD62B1D8E7B5A00D7469F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1B5BD62C1D8E7BA600D7469F /* UIComponentsDemoViewController.h */,
+				1B5BD62D1D8E7BA600D7469F /* UIComponentsDemoViewController.m */,
+				1B5BD62F1D8E7FA800D7469F /* Components.xcassets */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 		1B5EA2A21D77CA3F00F4E716 = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +316,7 @@
 		1B5EA2F11D77D81000F4E716 /* LTLab */ = {
 			isa = PBXGroup;
 			children = (
+				1BBDC7B01D8E993400331449 /* Runtime */,
 				1B84B8E31D796C0C00F69233 /* 基础题 */,
 				1B84B8DD1D791CB400F69233 /* UI */,
 				1B7EBD1A1D780AAA00710109 /* 0代码ViewController */,
@@ -343,6 +382,8 @@
 		1B84B8DD1D791CB400F69233 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1B5BD62B1D8E7B5A00D7469F /* Components */,
+				1B5BD6221D8E6BD500D7469F /* UIButton */,
 				1B35FECF1D815D2C0084F930 /* UIImageView */,
 				1B35FECB1D81479B0084F930 /* UIColor */,
 				1B84B8E21D791F9B00F69233 /* UITextField */,
@@ -369,8 +410,8 @@
 			children = (
 				1B7EBD3A1D78112D00710109 /* ImageTextField.h */,
 				1B7EBD3B1D78112D00710109 /* ImageTextField.m */,
-				1B35FEC51D8116EA0084F930 /* LTTextFiled.h */,
-				1B35FEC61D8116EA0084F930 /* LTTextFiled.m */,
+				1B35FEC51D8116EA0084F930 /* LTTextField.h */,
+				1B35FEC61D8116EA0084F930 /* LTTextField.m */,
 				1BEDEC701D82559A00669624 /* TextViewDemoViewController.h */,
 				1BEDEC711D82559A00669624 /* TextViewDemoViewController.m */,
 			);
@@ -387,6 +428,15 @@
 				1B1658EE1D7ED716005E18A8 /* ExamNonARCViewController.m */,
 			);
 			name = "基础题";
+			sourceTree = "<group>";
+		};
+		1BBDC7B01D8E993400331449 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				1BBDC7B11D8E997300331449 /* RuntimeDemoViewController.h */,
+				1BBDC7B21D8E997300331449 /* RuntimeDemoViewController.m */,
+			);
+			name = Runtime;
 			sourceTree = "<group>";
 		};
 		1BD073751D894BF500290455 /* 6 */ = {
@@ -543,6 +593,7 @@
 				TargetAttributes = {
 					1B5EA2AA1D77CA3F00F4E716 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = ZVBJ5UPUFX;
 					};
 					1B5EA2C31D77CA3F00F4E716 = {
 						CreatedOnToolsVersion = 7.3;
@@ -554,6 +605,7 @@
 					};
 					1B5EA2EF1D77D81000F4E716 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = ZVBJ5UPUFX;
 					};
 					1B5EA3071D77D81100F4E716 = {
 						CreatedOnToolsVersion = 7.3;
@@ -621,8 +673,10 @@
 				1B5EA3021D77D81100F4E716 /* LaunchScreen.storyboard in Resources */,
 				1B5EA2FF1D77D81000F4E716 /* Assets.xcassets in Resources */,
 				1B35FECA1D8117440084F930 /* podfile in Resources */,
+				1B5BD6271D8E741700D7469F /* ButtonImage.xcassets in Resources */,
 				1B5EA2FD1D77D81000F4E716 /* Main.storyboard in Resources */,
 				1B7EBD3E1D7811F400710109 /* ImageTextFiled.xib in Resources */,
+				1B5BD6301D8E7FA800D7469F /* Components.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -775,16 +829,20 @@
 				1B1658EF1D7ED716005E18A8 /* ExamNonARCViewController.m in Sources */,
 				1BEDEC721D82559A00669624 /* TextViewDemoViewController.m in Sources */,
 				1B84B8E01D791D1D00F69233 /* UISegmentedControlDemoViewController.m in Sources */,
+				1B5BD62A1D8E755400D7469F /* UIButtonViewController.m in Sources */,
 				1B5EA3251D77DCB900F4E716 /* UISegmentedControl+LTAdd.m in Sources */,
 				1B5EA2FA1D77D81000F4E716 /* ViewController.m in Sources */,
 				1B35FED51D815E780084F930 /* UIDemoTableViewController.m in Sources */,
 				1B5EA2F71D77D81000F4E716 /* AppDelegate.m in Sources */,
 				1B35FECE1D8148EA0084F930 /* CALayer+LTAdd.m in Sources */,
+				1B5BD62E1D8E7BA600D7469F /* UIComponentsDemoViewController.m in Sources */,
+				1B5BD6251D8E6C7300D7469F /* UIButton+LTAdd.m in Sources */,
 				1B84B8E61D796C3400F69233 /* ExamViewController.m in Sources */,
 				1B7EBD1D1D780AC200710109 /* LoginViewModel.m in Sources */,
-				1B35FEC71D8116EA0084F930 /* LTTextFiled.m in Sources */,
+				1B35FEC71D8116EA0084F930 /* LTTextField.m in Sources */,
 				1B35FEDB1D815F460084F930 /* UIImageViewDemoViewController.m in Sources */,
 				1B5EA2F41D77D81000F4E716 /* main.m in Sources */,
+				1BBDC7B31D8E997300331449 /* RuntimeDemoViewController.m in Sources */,
 				1B35FED21D815DA40084F930 /* UIImage+LTAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -951,6 +1009,7 @@
 			baseConfigurationReference = 442AD5661431738949C65CA5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZVBJ5UPUFX;
 				INFOPLIST_FILE = LTKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = limao.LTKit;
@@ -963,6 +1022,7 @@
 			baseConfigurationReference = 62553992C9C925F2B5C67765 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZVBJ5UPUFX;
 				INFOPLIST_FILE = LTKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = limao.LTKit;
@@ -1021,6 +1081,7 @@
 			baseConfigurationReference = 95B7689A30FFAADE5FFBCA71 /* Pods-LTLab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZVBJ5UPUFX;
 				INFOPLIST_FILE = LTLab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = limao.LTLab;
@@ -1033,6 +1094,7 @@
 			baseConfigurationReference = 81CFAE8340487A29962ABBD0 /* Pods-LTLab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZVBJ5UPUFX;
 				INFOPLIST_FILE = LTLab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = limao.LTLab;
