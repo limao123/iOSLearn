@@ -2,11 +2,13 @@ target "LTKit" do
 pod ‘BmobSDK’
 pod 'XXNibBridge'
 pod 'Masonry'
+pod 'BlocksKit'
 end
 
 target "LTLab" do
 pod ‘BmobSDK’
 pod 'XXNibBridge'
 pod 'Masonry'
+pod 'BlocksKit'
 end
 

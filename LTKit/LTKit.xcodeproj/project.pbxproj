@@ -40,13 +40,19 @@
 		1B7EBD361D78108E00710109 /* NSDate+formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7EBD2C1D78108E00710109 /* NSDate+formatter.m */; };
 		1B7EBD371D78108E00710109 /* ConfigUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7EBD2E1D78108E00710109 /* ConfigUtil.m */; };
 		1B7EBD381D78108E00710109 /* Base64codeFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7EBD301D78108E00710109 /* Base64codeFunc.m */; };
-		1B7EBD3C1D78112D00710109 /* ImageTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7EBD3B1D78112D00710109 /* ImageTextField.m */; };
 		1B7EBD3E1D7811F400710109 /* ImageTextFiled.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B7EBD3D1D7811F400710109 /* ImageTextFiled.xib */; };
 		1B84B8E01D791D1D00F69233 /* UISegmentedControlDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84B8DF1D791D1D00F69233 /* UISegmentedControlDemoViewController.m */; };
 		1B84B8E61D796C3400F69233 /* ExamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84B8E51D796C3300F69233 /* ExamViewController.m */; };
 		1BBDC7B31D8E997300331449 /* RuntimeDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBDC7B21D8E997300331449 /* RuntimeDemoViewController.m */; };
 		1BEDEC721D82559A00669624 /* TextViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEDEC711D82559A00669624 /* TextViewDemoViewController.m */; };
 		1BEDEC731D825A9D00669624 /* UIColor+LTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7EBD281D78108E00710109 /* UIColor+LTAdd.m */; };
+		1BF4CB991D8FC9F600467E8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4CB981D8FC9F600467E8B /* main.m */; };
+		1BF4CBA51D8FCF4300467E8B /* TRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4CBA41D8FCF4300467E8B /* TRPerson.m */; };
+		1BF4CBA81D8FD2E000467E8B /* NSArray+TRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4CBA71D8FD2E000467E8B /* NSArray+TRPerson.m */; };
+		1BF4CBAB1D8FD67D00467E8B /* ClassOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4CBAA1D8FD67D00467E8B /* ClassOne.m */; };
+		1BF4CBAE1D8FD68600467E8B /* ClassTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4CBAD1D8FD68600467E8B /* ClassTwo.m */; };
+		1BF4CBB11D8FD91500467E8B /* AppleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4CBB01D8FD91500467E8B /* AppleClass.m */; };
+		1BF4CBB41D8FD95D00467E8B /* AppleClass+Modify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4CBB31D8FD95D00467E8B /* AppleClass+Modify.m */; };
 		2C514E1B0C7EFC1891F50B51 /* libPods-LTLab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D33793F4AF803AD9C65AE655 /* libPods-LTLab.a */; };
 		73663107959539FB087CF949 /* libPods-LTKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2191BC69D9FC526178D6881 /* libPods-LTKit.a */; };
 		8AC75A8AC6FEF93396921D36 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F139E586CC14B392D1A36B /* libPods.a */; };
@@ -83,9 +89,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1BF4CB941D8FC9F600467E8B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1B1658ED1D7ED716005E18A8 /* ExamNonARCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamNonARCViewController.h; sourceTree = "<group>"; };
 		1B1658EE1D7ED716005E18A8 /* ExamNonARCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamNonARCViewController.m; sourceTree = "<group>"; };
+		1B342E441D8F8FC000B6FBFF /* LTLab.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTLab.pch; sourceTree = "<group>"; };
 		1B35FEC51D8116EA0084F930 /* LTTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTextField.h; sourceTree = "<group>"; };
 		1B35FEC61D8116EA0084F930 /* LTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTextField.m; sourceTree = "<group>"; };
 		1B35FEC81D8117440084F930 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
@@ -149,8 +168,6 @@
 		1B7EBD2E1D78108E00710109 /* ConfigUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigUtil.m; sourceTree = "<group>"; };
 		1B7EBD2F1D78108E00710109 /* Base64codeFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64codeFunc.h; sourceTree = "<group>"; };
 		1B7EBD301D78108E00710109 /* Base64codeFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64codeFunc.m; sourceTree = "<group>"; };
-		1B7EBD3A1D78112D00710109 /* ImageTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageTextField.h; path = ../LTKit/ImageTextField.h; sourceTree = "<group>"; };
-		1B7EBD3B1D78112D00710109 /* ImageTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageTextField.m; path = ../LTKit/ImageTextField.m; sourceTree = "<group>"; };
 		1B7EBD3D1D7811F400710109 /* ImageTextFiled.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTextFiled.xib; sourceTree = "<group>"; };
 		1B84B8DE1D791D1D00F69233 /* UISegmentedControlDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISegmentedControlDemoViewController.h; sourceTree = "<group>"; };
 		1B84B8DF1D791D1D00F69233 /* UISegmentedControlDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISegmentedControlDemoViewController.m; sourceTree = "<group>"; };
@@ -160,13 +177,29 @@
 		1BBDC7B21D8E997300331449 /* RuntimeDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeDemoViewController.m; sourceTree = "<group>"; };
 		1BEDEC701D82559A00669624 /* TextViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewDemoViewController.h; sourceTree = "<group>"; };
 		1BEDEC711D82559A00669624 /* TextViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewDemoViewController.m; sourceTree = "<group>"; };
+		1BF4CB961D8FC9F600467E8B /* LTLab-masos */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "LTLab-masos"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BF4CB981D8FC9F600467E8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1BF4CBA31D8FCF4300467E8B /* TRPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPerson.h; sourceTree = "<group>"; };
+		1BF4CBA41D8FCF4300467E8B /* TRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPerson.m; sourceTree = "<group>"; };
+		1BF4CBA61D8FD2E000467E8B /* NSArray+TRPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+TRPerson.h"; sourceTree = "<group>"; };
+		1BF4CBA71D8FD2E000467E8B /* NSArray+TRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+TRPerson.m"; sourceTree = "<group>"; };
+		1BF4CBA91D8FD67D00467E8B /* ClassOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassOne.h; sourceTree = "<group>"; };
+		1BF4CBAA1D8FD67D00467E8B /* ClassOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassOne.m; sourceTree = "<group>"; };
+		1BF4CBAC1D8FD68600467E8B /* ClassTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassTwo.h; sourceTree = "<group>"; };
+		1BF4CBAD1D8FD68600467E8B /* ClassTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassTwo.m; sourceTree = "<group>"; };
+		1BF4CBAF1D8FD91500467E8B /* AppleClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleClass.h; sourceTree = "<group>"; };
+		1BF4CBB01D8FD91500467E8B /* AppleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleClass.m; sourceTree = "<group>"; };
+		1BF4CBB21D8FD95D00467E8B /* AppleClass+Modify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppleClass+Modify.h"; sourceTree = "<group>"; };
+		1BF4CBB31D8FD95D00467E8B /* AppleClass+Modify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppleClass+Modify.m"; sourceTree = "<group>"; };
 		442AD5661431738949C65CA5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		55F139E586CC14B392D1A36B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		56DAB4A89C5E81EE32F89B23 /* Pods-LTKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LTKit/Pods-LTKit.debug.xcconfig"; sourceTree = "<group>"; };
 		62553992C9C925F2B5C67765 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		81CFAE8340487A29962ABBD0 /* Pods-LTLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTLab/Pods-LTLab.release.xcconfig"; sourceTree = "<group>"; };
 		95B7689A30FFAADE5FFBCA71 /* Pods-LTLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LTLab/Pods-LTLab.debug.xcconfig"; sourceTree = "<group>"; };
 		C2191BC69D9FC526178D6881 /* libPods-LTKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LTKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33793F4AF803AD9C65AE655 /* libPods-LTLab.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LTLab.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70FA1CA8B6F9243765581A4 /* Pods-LTKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTKit/Pods-LTKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +242,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1B5EA3101D77D81100F4E716 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BF4CB931D8FC9F600467E8B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,6 +308,7 @@
 				1B35FEC81D8117440084F930 /* podfile */,
 				1B5EA2AD1D77CA3F00F4E716 /* LTKit */,
 				1B5EA2F11D77D81000F4E716 /* LTLab */,
+				1BF4CB971D8FC9F600467E8B /* LTLab-masos */,
 				1B5EA2AC1D77CA3F00F4E716 /* Products */,
 				CEC414731BD2B3AF0B3F0A14 /* Pods */,
 				6F767390B67902988062B6F8 /* Frameworks */,
@@ -283,6 +324,7 @@
 				1B5EA2F01D77D81000F4E716 /* LTLab.app */,
 				1B5EA3081D77D81100F4E716 /* LTLabTests.xctest */,
 				1B5EA3131D77D81100F4E716 /* LTLabUITests.xctest */,
+				1BF4CB961D8FC9F600467E8B /* LTLab-masos */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -330,6 +372,7 @@
 				1B5EA3031D77D81100F4E716 /* Info.plist */,
 				1B5EA2F21D77D81000F4E716 /* Supporting Files */,
 				1B7EBD3D1D7811F400710109 /* ImageTextFiled.xib */,
+				1B342E441D8F8FC000B6FBFF /* LTLab.pch */,
 			);
 			path = LTLab;
 			sourceTree = "<group>";
@@ -408,8 +451,6 @@
 		1B84B8E21D791F9B00F69233 /* UITextField */ = {
 			isa = PBXGroup;
 			children = (
-				1B7EBD3A1D78112D00710109 /* ImageTextField.h */,
-				1B7EBD3B1D78112D00710109 /* ImageTextField.m */,
 				1B35FEC51D8116EA0084F930 /* LTTextField.h */,
 				1B35FEC61D8116EA0084F930 /* LTTextField.m */,
 				1BEDEC701D82559A00669624 /* TextViewDemoViewController.h */,
@@ -446,6 +487,26 @@
 			name = 6;
 			sourceTree = "<group>";
 		};
+		1BF4CB971D8FC9F600467E8B /* LTLab-masos */ = {
+			isa = PBXGroup;
+			children = (
+				1BF4CB981D8FC9F600467E8B /* main.m */,
+				1BF4CBA31D8FCF4300467E8B /* TRPerson.h */,
+				1BF4CBA41D8FCF4300467E8B /* TRPerson.m */,
+				1BF4CBA61D8FD2E000467E8B /* NSArray+TRPerson.h */,
+				1BF4CBA71D8FD2E000467E8B /* NSArray+TRPerson.m */,
+				1BF4CBA91D8FD67D00467E8B /* ClassOne.h */,
+				1BF4CBAA1D8FD67D00467E8B /* ClassOne.m */,
+				1BF4CBAC1D8FD68600467E8B /* ClassTwo.h */,
+				1BF4CBAD1D8FD68600467E8B /* ClassTwo.m */,
+				1BF4CBAF1D8FD91500467E8B /* AppleClass.h */,
+				1BF4CBB01D8FD91500467E8B /* AppleClass.m */,
+				1BF4CBB21D8FD95D00467E8B /* AppleClass+Modify.h */,
+				1BF4CBB31D8FD95D00467E8B /* AppleClass+Modify.m */,
+			);
+			path = "LTLab-masos";
+			sourceTree = "<group>";
+		};
 		6F767390B67902988062B6F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +524,8 @@
 				62553992C9C925F2B5C67765 /* Pods.release.xcconfig */,
 				95B7689A30FFAADE5FFBCA71 /* Pods-LTLab.debug.xcconfig */,
 				81CFAE8340487A29962ABBD0 /* Pods-LTLab.release.xcconfig */,
+				56DAB4A89C5E81EE32F89B23 /* Pods-LTKit.debug.xcconfig */,
+				E70FA1CA8B6F9243765581A4 /* Pods-LTKit.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -582,6 +645,23 @@
 			productReference = 1B5EA3131D77D81100F4E716 /* LTLabUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		1BF4CB951D8FC9F600467E8B /* LTLab-masos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BF4CB9A1D8FC9F600467E8B /* Build configuration list for PBXNativeTarget "LTLab-masos" */;
+			buildPhases = (
+				1BF4CB921D8FC9F600467E8B /* Sources */,
+				1BF4CB931D8FC9F600467E8B /* Frameworks */,
+				1BF4CB941D8FC9F600467E8B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LTLab-masos";
+			productName = "LTLab-masos";
+			productReference = 1BF4CB961D8FC9F600467E8B /* LTLab-masos */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -615,6 +695,10 @@
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = 1B5EA2EF1D77D81000F4E716;
 					};
+					1BF4CB951D8FC9F600467E8B = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 1B5EA2A61D77CA3F00F4E716 /* Build configuration list for PBXProject "LTKit" */;
@@ -636,6 +720,7 @@
 				1B5EA2EF1D77D81000F4E716 /* LTLab */,
 				1B5EA3071D77D81100F4E716 /* LTLabTests */,
 				1B5EA3121D77D81100F4E716 /* LTLabUITests */,
+				1BF4CB951D8FC9F600467E8B /* LTLab-masos */,
 			);
 		};
 /* End PBXProject section */
@@ -796,7 +881,6 @@
 			files = (
 				1B5EA2B61D77CA3F00F4E716 /* ViewController.m in Sources */,
 				1B7EBD311D78108E00710109 /* CALayer+Addition.m in Sources */,
-				1B7EBD3C1D78112D00710109 /* ImageTextField.m in Sources */,
 				1B5EA2B31D77CA3F00F4E716 /* AppDelegate.m in Sources */,
 				1B7EBD361D78108E00710109 /* NSDate+formatter.m in Sources */,
 				1B7EBD321D78108E00710109 /* UINavigationBar+BackgroundColor.m in Sources */,
@@ -858,6 +942,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BF4CB921D8FC9F600467E8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BF4CBA51D8FCF4300467E8B /* TRPerson.m in Sources */,
+				1BF4CBB41D8FD95D00467E8B /* AppleClass+Modify.m in Sources */,
+				1BF4CBB11D8FD91500467E8B /* AppleClass.m in Sources */,
+				1BF4CBAB1D8FD67D00467E8B /* ClassOne.m in Sources */,
+				1BF4CB991D8FC9F600467E8B /* main.m in Sources */,
+				1BF4CBAE1D8FD68600467E8B /* ClassTwo.m in Sources */,
+				1BF4CBA81D8FD2E000467E8B /* NSArray+TRPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1006,7 +1104,7 @@
 		};
 		1B5EA2D91D77CA3F00F4E716 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 442AD5661431738949C65CA5 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 56DAB4A89C5E81EE32F89B23 /* Pods-LTKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZVBJ5UPUFX;
@@ -1019,7 +1117,7 @@
 		};
 		1B5EA2DA1D77CA3F00F4E716 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62553992C9C925F2B5C67765 /* Pods.release.xcconfig */;
+			baseConfigurationReference = E70FA1CA8B6F9243765581A4 /* Pods-LTKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZVBJ5UPUFX;
@@ -1082,6 +1180,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZVBJ5UPUFX;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LTLab/LTLab.pch";
 				INFOPLIST_FILE = LTLab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = limao.LTLab;
@@ -1095,6 +1194,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZVBJ5UPUFX;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LTLab/LTLab.pch";
 				INFOPLIST_FILE = LTLab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = limao.LTLab;
@@ -1145,6 +1245,32 @@
 				PRODUCT_BUNDLE_IDENTIFIER = limao.LTLabUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = LTLab;
+			};
+			name = Release;
+		};
+		1BF4CB9B1D8FC9F600467E8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1BF4CB9C1D8FC9F600467E8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1213,6 +1339,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		1BF4CB9A1D8FC9F600467E8B /* Build configuration list for PBXNativeTarget "LTLab-masos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BF4CB9B1D8FC9F600467E8B /* Debug */,
+				1BF4CB9C1D8FC9F600467E8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

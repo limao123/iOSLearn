@@ -1,16 +1,33 @@
 PODS:
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
   - BmobSDK (1.7.2)
-  - Masonry (1.0.1)
+  - Masonry (1.0.2)
   - XXNibBridge (2.3.1)
 
 DEPENDENCIES:
+  - BlocksKit
   - BmobSDK
   - Masonry
   - XXNibBridge
 
 SPEC CHECKSUMS:
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   BmobSDK: e188cb31d6a8417ab668aee821da227d7512b865
-  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
 
 COCOAPODS: 0.39.0
