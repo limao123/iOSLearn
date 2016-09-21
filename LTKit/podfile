@@ -3,6 +3,7 @@ pod ‘BmobSDK’
 pod 'XXNibBridge'
 pod 'Masonry'
 pod 'BlocksKit'
+pod 'ReactiveCocoa'
 end
 
 target "LTLab" do
@@ -10,5 +11,6 @@ pod ‘BmobSDK’
 pod 'XXNibBridge'
 pod 'Masonry'
 pod 'BlocksKit'
+pod 'ReactiveCocoa'
 end
 

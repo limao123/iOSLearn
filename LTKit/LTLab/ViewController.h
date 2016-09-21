@@ -10,6 +10,6 @@
 
 @interface ViewController : UIViewController
 
-
+@property (copy,nonatomic) NSArray *outArray;
 @end
 

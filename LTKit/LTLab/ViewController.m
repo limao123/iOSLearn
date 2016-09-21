@@ -10,13 +10,19 @@
 
 @interface ViewController ()
 //@property (weak, nonatomic) IBOutlet UISegmentedControl *mySC;
-
+@property (copy) NSMutableArray *inArray;
 @end
 
 @implementation ViewController
 
+- (NSArray *)outArray {
+    return [self.inArray copy];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.inArray = [[NSMutableArray alloc] initWithArray:@[@1]];
+    NSLog(@"%@",self.outArray);
     // Do any additional setup after loading the view, typically from a nib.
     // 去掉颜色,现在整个segment偶看不到,可以相应点击事件
 //    self.mySC.tintColor = [UIColor clearColor];
@@ -31,6 +37,8 @@
     __weak typeof(self) weakSelf = self;
 //    id weak weakSelf = self;
 //    id __block weakSelf = self;
+//    self.array = [[NSMutableArray alloc] initWithArray:@[@1]];
+//    [self.array addObject:@3];
     
     
 }
