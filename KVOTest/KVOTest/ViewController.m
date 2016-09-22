@@ -22,16 +22,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [super viewDidLoad];
+    myLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 100, 100, 30 )];
+    myLabel.textColor = [UIColor redColor];
+    [self.view addSubview:myLabel];
     
     stockForKVO = [[StockData alloc] init];
     [stockForKVO setValue:@"searph" forKey:@"stockName"];
     [stockForKVO setValue:@10.0 forKey:@"price"];
-    [stockForKVO addObserver:self forKeyPath:@"price" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:NULL];
+    [stockForKVO addObserver:self forKeyPath:@"price" options:NSKeyValueObservingOptionNew context:NULL];
     
-    myLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 100, 100, 30 )];
-    myLabel.textColor = [UIColor redColor];
-    myLabel.text = [NSString stringWithFormat:@"%@",[stockForKVO valueForKey:@"price"]];
-    [self.view addSubview:myLabel];
+
     
     UIButton * b = [[UIButton alloc] initWithFrame:CGRectMake(40, 40, 100, 30)];
     [b setTitle:@"点击我" forState:UIControlStateNormal];
@@ -51,8 +51,12 @@
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    //根据path可以直接得到新值，而change可以得到更多信息
     if([keyPath isEqualToString:@"price"]){
         myLabel.text = [NSString stringWithFormat:@"%@",[stockForKVO valueForKey:@"price"]];
+        NSLog(@"%@",[stockForKVO valueForKey:@"price"]);
+        
+        NSLog(@"%@",change);
     }
 }
 

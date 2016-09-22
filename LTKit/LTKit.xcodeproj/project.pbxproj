@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B1658EF1D7ED716005E18A8 /* ExamNonARCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1658EE1D7ED716005E18A8 /* ExamNonARCViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1B33B3EB1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B33B3EA1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m */; };
 		1B35FEC71D8116EA0084F930 /* LTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B35FEC61D8116EA0084F930 /* LTTextField.m */; };
 		1B35FEC91D8117440084F930 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B35FEC81D8117440084F930 /* podfile */; };
 		1B35FECA1D8117440084F930 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B35FEC81D8117440084F930 /* podfile */; };
@@ -104,6 +105,8 @@
 /* Begin PBXFileReference section */
 		1B1658ED1D7ED716005E18A8 /* ExamNonARCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamNonARCViewController.h; sourceTree = "<group>"; };
 		1B1658EE1D7ED716005E18A8 /* ExamNonARCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamNonARCViewController.m; sourceTree = "<group>"; };
+		1B33B3E91D93BF9100B2D77F /* ReactiveCocoaDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactiveCocoaDemoViewController.h; sourceTree = "<group>"; };
+		1B33B3EA1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactiveCocoaDemoViewController.m; sourceTree = "<group>"; };
 		1B342E441D8F8FC000B6FBFF /* LTLab.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTLab.pch; sourceTree = "<group>"; };
 		1B35FEC51D8116EA0084F930 /* LTTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTextField.h; sourceTree = "<group>"; };
 		1B35FEC61D8116EA0084F930 /* LTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTextField.m; sourceTree = "<group>"; };
@@ -258,6 +261,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B33B3E51D93BE8600B2D77F /* ReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				1B33B3E91D93BF9100B2D77F /* ReactiveCocoaDemoViewController.h */,
+				1B33B3EA1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m */,
+			);
+			name = ReactiveCocoa;
+			sourceTree = "<group>";
+		};
 		1B35FECB1D81479B0084F930 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +474,7 @@
 		1B84B8E31D796C0C00F69233 /* 基础题 */ = {
 			isa = PBXGroup;
 			children = (
+				1B33B3E51D93BE8600B2D77F /* ReactiveCocoa */,
 				1BD073751D894BF500290455 /* 6 */,
 				1B84B8E41D796C3300F69233 /* ExamViewController.h */,
 				1B84B8E51D796C3300F69233 /* ExamViewController.m */,
@@ -909,6 +922,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B33B3EB1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m in Sources */,
 				1BEDEC731D825A9D00669624 /* UIColor+LTAdd.m in Sources */,
 				1B1658EF1D7ED716005E18A8 /* ExamNonARCViewController.m in Sources */,
 				1BEDEC721D82559A00669624 /* TextViewDemoViewController.m in Sources */,
@@ -1104,7 +1118,6 @@
 		};
 		1B5EA2D91D77CA3F00F4E716 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56DAB4A89C5E81EE32F89B23 /* Pods-LTKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZVBJ5UPUFX;
@@ -1117,7 +1130,6 @@
 		};
 		1B5EA2DA1D77CA3F00F4E716 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E70FA1CA8B6F9243765581A4 /* Pods-LTKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZVBJ5UPUFX;
@@ -1176,7 +1188,6 @@
 		};
 		1B5EA31B1D77D81100F4E716 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95B7689A30FFAADE5FFBCA71 /* Pods-LTLab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZVBJ5UPUFX;
@@ -1190,7 +1201,6 @@
 		};
 		1B5EA31C1D77D81100F4E716 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81CFAE8340487A29962ABBD0 /* Pods-LTLab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZVBJ5UPUFX;
@@ -1347,6 +1357,7 @@
 				1BF4CB9C1D8FC9F600467E8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
