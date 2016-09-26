@@ -20,8 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [self exam56];
+    [self exam55];
+//    [self exam56];
 
 
 }
@@ -50,6 +50,36 @@
     [self exam56Receive];
     [self exam56Send];
 }
+
+- (void)exam54 {
+    NSString *a = @"test";
+    
+}
+
+- (void)exam55 {
+    
+    //po:打印对象的值,使用po view可以打印对象
+    UIView *view = [[UIView alloc] init];
+    
+    //p:打印基础类型的值,使用 p a可以打印基础类型,也可以使用 po a，但只能看到值，使用p a可以看到更详细的信息
+    int a = 5;
+    
+    
+    //expr:动态执行指定表达式，expr b = 3，下面的打印语句会输出3
+    int b = 2;
+    NSLog(@"%d",b);
+    
+    //call:call即是调用的意思。其实上述的po和p也有调用的功能。因此一般只在不需要显示输出，或是方法无返回值时使用call
+    //call [self.view setBackgroundColor:[UIColor redColor]] 执行后背景将变成红色
+    
+    //image:image 命令可用于寻址，有多个组合命令。比较实用的用法是用于寻找栈地址对应的代码位置。
+//    NSArray *arr=[[NSArray alloc] initWithObjects:@"1",@"2", nil];
+//    NSLog(@"%@",arr[2]);
+    
+    
+}
+
+
 
 - (void)exam56Send {
     //object表示是哪个对象发送的，userInfo表示携带的信息

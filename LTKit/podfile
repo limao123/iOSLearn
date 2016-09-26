@@ -1,9 +1,11 @@
+use_frameworks!
+
 target "LTKit" do
 pod ‘BmobSDK’
 pod 'XXNibBridge'
 pod 'Masonry'
 pod 'BlocksKit'
-pod 'ReactiveCocoa'
+pod "ReactiveCocoa", "~> 2.5"
 end
 
 target "LTLab" do
@@ -11,6 +13,6 @@ pod ‘BmobSDK’
 pod 'XXNibBridge'
 pod 'Masonry'
 pod 'BlocksKit'
-pod 'ReactiveCocoa'
+pod "ReactiveCocoa", "~> 2.5"
 end
 

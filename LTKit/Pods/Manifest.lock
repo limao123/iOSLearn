@@ -16,18 +16,27 @@ PODS:
     - BlocksKit/DynamicDelegate
   - BmobSDK (1.7.2)
   - Masonry (1.0.2)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - XXNibBridge (2.3.1)
 
 DEPENDENCIES:
   - BlocksKit
   - BmobSDK
   - Masonry
+  - ReactiveCocoa (~> 2.5)
   - XXNibBridge
 
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   BmobSDK: e188cb31d6a8417ab668aee821da227d7512b865
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
 
 COCOAPODS: 0.39.0

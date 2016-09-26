@@ -1,0 +1,6 @@
+framework module Pods_LTLab {
+  umbrella header "Pods-LTLab-umbrella.h"
+
+  export *
+  module * { export * }
+}

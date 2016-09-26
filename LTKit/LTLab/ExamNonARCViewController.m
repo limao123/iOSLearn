@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self exam54];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,7 +25,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (void)exam54 {
+    NSMutableArray *a = [[NSMutableArray alloc] initWithCapacity:1];
+    [a release];
+    [a addObject:@1];
+}
 
 /*
 #pragma mark - Navigation

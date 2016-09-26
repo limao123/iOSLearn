@@ -1,5 +1,3 @@
-/
-/
 //  ReactiveCocoaDemoViewController.m
 //  LTKit
 //
