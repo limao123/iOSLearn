@@ -99,10 +99,10 @@
     
     //指示标约束
     [im mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(@13);
+        make.height.equalTo(@7);
         make.bottom.equalTo(textField.mas_top).offset(1);
         
-        make.width.equalTo(@19);
+        make.width.equalTo(@10);
         make.centerX.equalTo(pureSC.mas_centerX).offset(-offset);
     }];
     
