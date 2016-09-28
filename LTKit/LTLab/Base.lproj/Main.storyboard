@@ -573,10 +573,10 @@
             </objects>
             <point key="canvasLocation" x="461" y="2512"/>
         </scene>
-        <!--Exam NonARC View Controller-->
+        <!--Exam View Controller-->
         <scene sceneID="O8N-gz-xGh">
             <objects>
-                <viewController id="vWC-Tk-h1m" customClass="ExamNonARCViewController" sceneMemberID="viewController">
+                <viewController id="vWC-Tk-h1m" customClass="ExamViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eb3-xl-dAC"/>
                         <viewControllerLayoutGuide type="bottom" id="CXE-l7-Ha7"/>

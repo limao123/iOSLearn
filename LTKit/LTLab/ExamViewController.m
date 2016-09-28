@@ -13,6 +13,7 @@
 
 @interface ExamViewController ()
 @property (strong,nonatomic) id observerOfExam56;
+@property (strong,nonatomic) NSDate *exam46Now;
 @end
 
 @implementation ExamViewController
@@ -20,7 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self exam55];
+    [self exam46];
+//    [self exam55];
 //    [self exam56];
 
 
@@ -46,10 +48,24 @@
     
 }
 
-- (void)exam56 {
-    [self exam56Receive];
-    [self exam56Send];
+- (void)exam46 {
+    _exam46Now = [NSDate date];
+    [self addObserver:self forKeyPath:@"exam46Now" options:NSKeyValueObservingOptionNew context:nil];
+    NSLog(@"1");
+    [self willChangeValueForKey:@"exam46Now"]; // “手动触发self.exam46Now的KVO”，必写。
+    NSLog(@"2");
+//    [self didChangeValueForKey:@"exam46Now"]; // “手动触发self.exam46Now的KVO”，必写,不写不会产生回调，回调可能是在didChange中调用。
+    NSLog(@"4");
 }
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    NSLog(@"3");
+}
+
+- (void)exam52 {
+    
+}
+
 
 - (void)exam54 {
     NSString *a = @"test";
@@ -107,6 +123,11 @@
         //...
 
     }];
+}
+
+- (void)exam56 {
+    [self exam56Receive];
+    [self exam56Send];
 }
 
 - (void)dealloc {

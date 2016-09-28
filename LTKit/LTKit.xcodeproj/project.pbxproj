@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		15B670261D56B6ED9FB86ECF /* Pods_LTLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36EB592C0D775078515C6AEB /* Pods_LTLab.framework */; };
 		1B1658EF1D7ED716005E18A8 /* ExamNonARCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1658EE1D7ED716005E18A8 /* ExamNonARCViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1B1982491D9BA48200C18CD9 /* NSObject+LTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1982481D9BA48200C18CD9 /* NSObject+LTAdd.m */; };
 		1B33B3EB1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B33B3EA1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m */; };
 		1B35FEC71D8116EA0084F930 /* LTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B35FEC61D8116EA0084F930 /* LTTextField.m */; };
 		1B35FEC91D8117440084F930 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1B35FEC81D8117440084F930 /* podfile */; };
@@ -74,6 +75,8 @@
 /* Begin PBXFileReference section */
 		1B1658ED1D7ED716005E18A8 /* ExamNonARCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamNonARCViewController.h; sourceTree = "<group>"; };
 		1B1658EE1D7ED716005E18A8 /* ExamNonARCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamNonARCViewController.m; sourceTree = "<group>"; };
+		1B1982471D9BA48200C18CD9 /* NSObject+LTAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LTAdd.h"; sourceTree = "<group>"; };
+		1B1982481D9BA48200C18CD9 /* NSObject+LTAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LTAdd.m"; sourceTree = "<group>"; };
 		1B33B3E91D93BF9100B2D77F /* ReactiveCocoaDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactiveCocoaDemoViewController.h; sourceTree = "<group>"; };
 		1B33B3EA1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactiveCocoaDemoViewController.m; sourceTree = "<group>"; };
 		1B342E441D8F8FC000B6FBFF /* LTLab.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTLab.pch; sourceTree = "<group>"; };
@@ -412,6 +415,8 @@
 				1B84B8E51D796C3300F69233 /* ExamViewController.m */,
 				1B1658ED1D7ED716005E18A8 /* ExamNonARCViewController.h */,
 				1B1658EE1D7ED716005E18A8 /* ExamNonARCViewController.m */,
+				1B1982471D9BA48200C18CD9 /* NSObject+LTAdd.h */,
+				1B1982481D9BA48200C18CD9 /* NSObject+LTAdd.m */,
 			);
 			name = "基础题";
 			sourceTree = "<group>";
@@ -715,6 +720,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B33B3EB1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m in Sources */,
+				1B1982491D9BA48200C18CD9 /* NSObject+LTAdd.m in Sources */,
 				1BEDEC731D825A9D00669624 /* UIColor+LTAdd.m in Sources */,
 				1B1658EF1D7ED716005E18A8 /* ExamNonARCViewController.m in Sources */,
 				1BEDEC721D82559A00669624 /* TextViewDemoViewController.m in Sources */,
