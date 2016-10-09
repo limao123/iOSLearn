@@ -48,6 +48,7 @@ NSString *const kPGKVOAssociatedObservers = @"PGKVOAssociatedObservers";
 #pragma mark - Debug Help Methods
 static NSArray *ClassMethodNames(Class c)
 {
+    
     NSMutableArray *array = [NSMutableArray array];
     
     unsigned int methodCount = 0;
