@@ -36,6 +36,7 @@
 		1B5EA2FF1D77D81000F4E716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B5EA2FE1D77D81000F4E716 /* Assets.xcassets */; };
 		1B5EA3021D77D81100F4E716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5EA3001D77D81100F4E716 /* LaunchScreen.storyboard */; };
 		1B5EA3251D77DCB900F4E716 /* UISegmentedControl+LTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EA3241D77DCB900F4E716 /* UISegmentedControl+LTAdd.m */; };
+		1B6510551DAB83FC0026EC33 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6510541DAB83FC0026EC33 /* UserModel.m */; };
 		1B7EBD1D1D780AC200710109 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7EBD1C1D780AC200710109 /* LoginViewModel.m */; };
 		1B7EBD311D78108E00710109 /* CALayer+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7EBD221D78108E00710109 /* CALayer+Addition.m */; };
 		1B7EBD321D78108E00710109 /* UINavigationBar+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7EBD241D78108E00710109 /* UINavigationBar+BackgroundColor.m */; };
@@ -121,6 +122,8 @@
 		1B5EA3031D77D81100F4E716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B5EA3231D77DCB900F4E716 /* UISegmentedControl+LTAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+LTAdd.h"; sourceTree = "<group>"; };
 		1B5EA3241D77DCB900F4E716 /* UISegmentedControl+LTAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+LTAdd.m"; sourceTree = "<group>"; };
+		1B6510531DAB83FC0026EC33 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		1B6510541DAB83FC0026EC33 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		1B7EBD1B1D780AC200710109 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		1B7EBD1C1D780AC200710109 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		1B7EBD211D78108E00710109 /* CALayer+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Addition.h"; sourceTree = "<group>"; };
@@ -334,6 +337,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1B6510521DAB83D00026EC33 /* 1 */ = {
+			isa = PBXGroup;
+			children = (
+				1B6510531DAB83FC0026EC33 /* UserModel.h */,
+				1B6510541DAB83FC0026EC33 /* UserModel.m */,
+			);
+			name = 1;
+			sourceTree = "<group>";
+		};
 		1B7EBD1A1D780AAA00710109 /* 0代码ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +423,7 @@
 		1B84B8E31D796C0C00F69233 /* 基础题 */ = {
 			isa = PBXGroup;
 			children = (
+				1B6510521DAB83D00026EC33 /* 1 */,
 				1B84B8E41D796C3300F69233 /* ExamViewController.h */,
 				1B84B8E51D796C3300F69233 /* ExamViewController.m */,
 				1B1658ED1D7ED716005E18A8 /* ExamNonARCViewController.h */,
@@ -733,6 +746,7 @@
 				1B35FECE1D8148EA0084F930 /* CALayer+LTAdd.m in Sources */,
 				1B5BD62E1D8E7BA600D7469F /* UIComponentsDemoViewController.m in Sources */,
 				1B5BD6251D8E6C7300D7469F /* UIButton+LTAdd.m in Sources */,
+				1B6510551DAB83FC0026EC33 /* UserModel.m in Sources */,
 				1B84B8E61D796C3400F69233 /* ExamViewController.m in Sources */,
 				1B7EBD1D1D780AC200710109 /* LoginViewModel.m in Sources */,
 				1B35FEC71D8116EA0084F930 /* LTTextField.m in Sources */,
