@@ -17,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self exam54];
+    
+//    [self exam54];
+    [self exam65];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,6 +31,20 @@
     NSMutableArray *a = [[NSMutableArray alloc] initWithCapacity:1];
     [a release];
     [a addObject:@1];
+}
+
+- (void)exam65 {
+    NSMutableArray* ary = [[NSMutableArray array] retain];
+    NSString *str = [NSString stringWithFormat:@"test"];
+    [str retain];
+    [ary addObject:str];
+    NSLog(@"%@%d",str,[str retainCount]);
+    [str retain];
+    [str release];
+    [str release];
+    NSLog(@"%@%d",str,[str retainCount]);
+    [ary removeAllObjects];
+    NSLog(@"%@%d",str,[str retainCount]);
 }
 
 /*

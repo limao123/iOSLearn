@@ -11,6 +11,7 @@
 #import "BK2ViewController.h"
 #import "BK3ViewController.h"
 #import "BK4ViewController.h"
+#import "ExamNonARCViewController.h"
 
 @interface BaseKnowledgeViewController ()
 @property (nonatomic,readwrite,copy) NSArray *dataArray;
@@ -20,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataArray = @[@"1",@"2",@"3",@"4"];
+    self.dataArray = @[@"1",@"2",@"3",@"4",@"MRC"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,6 +77,13 @@
         case 3:{
             BK4ViewController *bk4VC = [[BK4ViewController alloc] init];
             [self.navigationController pushViewController:bk4VC animated:YES];
+            
+        }
+            break;
+            
+        case 4:{
+            ExamNonARCViewController *examMRC = [[ExamNonARCViewController alloc] init];
+            [self.navigationController pushViewController:examMRC animated:YES];
             
         }
             break;
