@@ -48,6 +48,13 @@
 		1B5EA3021D77D81100F4E716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B5EA3001D77D81100F4E716 /* LaunchScreen.storyboard */; };
 		1B5EA3251D77DCB900F4E716 /* UISegmentedControl+LTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EA3241D77DCB900F4E716 /* UISegmentedControl+LTAdd.m */; };
 		1B6510551DAB83FC0026EC33 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6510541DAB83FC0026EC33 /* UserModel.m */; };
+		1B752CFB1DAF72C00038223D /* BK8Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B752CFA1DAF72C00038223D /* BK8Model.m */; };
+		1B752CFE1DAF72E50038223D /* BK8Model+LTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B752CFD1DAF72E50038223D /* BK8Model+LTAdd.m */; };
+		1B752D011DAF743A0038223D /* NSObject+Association.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B752D001DAF743A0038223D /* NSObject+Association.m */; };
+		1B752D041DAF7B140038223D /* BK8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B752D031DAF7B140038223D /* BK8ViewController.m */; };
+		1B752D081DAF92460038223D /* MUHostClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B752D071DAF92460038223D /* MUHostClass.m */; };
+		1B752D0B1DAF92A70038223D /* MUHostClass+Association.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B752D0A1DAF92A70038223D /* MUHostClass+Association.m */; };
+		1B752D0E1DAF92B80038223D /* MUValueClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B752D0D1DAF92B80038223D /* MUValueClass.m */; };
 		1B7EBD1D1D780AC200710109 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7EBD1C1D780AC200710109 /* LoginViewModel.m */; };
 		1B7EBD311D78108E00710109 /* CALayer+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7EBD221D78108E00710109 /* CALayer+Addition.m */; };
 		1B7EBD321D78108E00710109 /* UINavigationBar+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7EBD241D78108E00710109 /* UINavigationBar+BackgroundColor.m */; };
@@ -157,6 +164,20 @@
 		1B5EA3241D77DCB900F4E716 /* UISegmentedControl+LTAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+LTAdd.m"; sourceTree = "<group>"; };
 		1B6510531DAB83FC0026EC33 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		1B6510541DAB83FC0026EC33 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		1B752CF91DAF72C00038223D /* BK8Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BK8Model.h; sourceTree = "<group>"; };
+		1B752CFA1DAF72C00038223D /* BK8Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BK8Model.m; sourceTree = "<group>"; };
+		1B752CFC1DAF72E50038223D /* BK8Model+LTAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BK8Model+LTAdd.h"; sourceTree = "<group>"; };
+		1B752CFD1DAF72E50038223D /* BK8Model+LTAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BK8Model+LTAdd.m"; sourceTree = "<group>"; };
+		1B752CFF1DAF743A0038223D /* NSObject+Association.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Association.h"; sourceTree = "<group>"; };
+		1B752D001DAF743A0038223D /* NSObject+Association.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Association.m"; sourceTree = "<group>"; };
+		1B752D021DAF7B140038223D /* BK8ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BK8ViewController.h; sourceTree = "<group>"; };
+		1B752D031DAF7B140038223D /* BK8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BK8ViewController.m; sourceTree = "<group>"; };
+		1B752D061DAF92460038223D /* MUHostClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUHostClass.h; sourceTree = "<group>"; };
+		1B752D071DAF92460038223D /* MUHostClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUHostClass.m; sourceTree = "<group>"; };
+		1B752D091DAF92A70038223D /* MUHostClass+Association.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MUHostClass+Association.h"; sourceTree = "<group>"; };
+		1B752D0A1DAF92A70038223D /* MUHostClass+Association.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MUHostClass+Association.m"; sourceTree = "<group>"; };
+		1B752D0C1DAF92B80038223D /* MUValueClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUValueClass.h; sourceTree = "<group>"; };
+		1B752D0D1DAF92B80038223D /* MUValueClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUValueClass.m; sourceTree = "<group>"; };
 		1B7EBD1B1D780AC200710109 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		1B7EBD1C1D780AC200710109 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		1B7EBD211D78108E00710109 /* CALayer+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Addition.h"; sourceTree = "<group>"; };
@@ -434,6 +455,35 @@
 			name = 1;
 			sourceTree = "<group>";
 		};
+		1B752CF81DAF725F0038223D /* 8 */ = {
+			isa = PBXGroup;
+			children = (
+				1B752D051DAF92330038223D /* demo1 */,
+				1B752CF91DAF72C00038223D /* BK8Model.h */,
+				1B752CFA1DAF72C00038223D /* BK8Model.m */,
+				1B752CFC1DAF72E50038223D /* BK8Model+LTAdd.h */,
+				1B752CFD1DAF72E50038223D /* BK8Model+LTAdd.m */,
+				1B752CFF1DAF743A0038223D /* NSObject+Association.h */,
+				1B752D001DAF743A0038223D /* NSObject+Association.m */,
+				1B752D021DAF7B140038223D /* BK8ViewController.h */,
+				1B752D031DAF7B140038223D /* BK8ViewController.m */,
+			);
+			name = 8;
+			sourceTree = "<group>";
+		};
+		1B752D051DAF92330038223D /* demo1 */ = {
+			isa = PBXGroup;
+			children = (
+				1B752D061DAF92460038223D /* MUHostClass.h */,
+				1B752D071DAF92460038223D /* MUHostClass.m */,
+				1B752D091DAF92A70038223D /* MUHostClass+Association.h */,
+				1B752D0A1DAF92A70038223D /* MUHostClass+Association.m */,
+				1B752D0C1DAF92B80038223D /* MUValueClass.h */,
+				1B752D0D1DAF92B80038223D /* MUValueClass.m */,
+			);
+			name = demo1;
+			sourceTree = "<group>";
+		};
 		1B7EBD1A1D780AAA00710109 /* 0代码ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,6 +561,7 @@
 		1B84B8E31D796C0C00F69233 /* 基础题 */ = {
 			isa = PBXGroup;
 			children = (
+				1B752CF81DAF725F0038223D /* 8 */,
 				1B1E66F81DAE1AD30038943C /* 5 */,
 				1B6510521DAB83D00026EC33 /* 1 */,
 				1B0EED361DAC8ED100F550DA /* 2 */,
@@ -830,10 +881,13 @@
 				1B33B3EB1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m in Sources */,
 				1B1982491D9BA48200C18CD9 /* NSObject+LTAdd.m in Sources */,
 				1BEDEC731D825A9D00669624 /* UIColor+LTAdd.m in Sources */,
+				1B752D041DAF7B140038223D /* BK8ViewController.m in Sources */,
 				1B1658EF1D7ED716005E18A8 /* ExamNonARCViewController.m in Sources */,
 				1BEDEC721D82559A00669624 /* TextViewDemoViewController.m in Sources */,
+				1B752D081DAF92460038223D /* MUHostClass.m in Sources */,
 				1B0EED491DACC9AD00F550DA /* BK3ViewController.m in Sources */,
 				1B84B8E01D791D1D00F69233 /* UISegmentedControlDemoViewController.m in Sources */,
+				1B752CFB1DAF72C00038223D /* BK8Model.m in Sources */,
 				1B5BD62A1D8E755400D7469F /* UIButtonViewController.m in Sources */,
 				1B5EA3251D77DCB900F4E716 /* UISegmentedControl+LTAdd.m in Sources */,
 				1B5EA2FA1D77D81000F4E716 /* ViewController.m in Sources */,
@@ -854,9 +908,13 @@
 				1B0EED451DACC6D600F550DA /* BK2ViewController.m in Sources */,
 				1B84B8E61D796C3400F69233 /* ExamViewController.m in Sources */,
 				1B7EBD1D1D780AC200710109 /* LoginViewModel.m in Sources */,
+				1B752D0E1DAF92B80038223D /* MUValueClass.m in Sources */,
 				1B35FEC71D8116EA0084F930 /* LTTextField.m in Sources */,
+				1B752D011DAF743A0038223D /* NSObject+Association.m in Sources */,
+				1B752CFE1DAF72E50038223D /* BK8Model+LTAdd.m in Sources */,
 				1B0EED561DACE2C800F550DA /* BK4ViewController.m in Sources */,
 				1B35FEDB1D815F460084F930 /* UIImageViewDemoViewController.m in Sources */,
+				1B752D0B1DAF92A70038223D /* MUHostClass+Association.m in Sources */,
 				1B5EA2F41D77D81000F4E716 /* main.m in Sources */,
 				1BBDC7B31D8E997300331449 /* RuntimeDemoViewController.m in Sources */,
 				1B35FED21D815DA40084F930 /* UIImage+LTAdd.m in Sources */,
