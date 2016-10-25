@@ -7,18 +7,19 @@
 //
 
 #import "MUHostClass+Association.h"
-#import "MUValueClass.h"
+#import <objc/runtime.h>
 
 @implementation MUHostClass (Association)
 
 const static char kValueObject = '0';
 
 - (void)setValueObject:(MUValueClass *)valueObject {
-    
+    objc_setAssociatedObject(self, &kValueObject, valueObject, OBJC_ASSOCIATION_ASSIGN);
+    [valueObject setWeakReference:self forWipeSEL:@selector(setValueObject:)];
 }
 
 - (MUValueClass *)valueObject {
-    
+    return objc_getAssociatedObject(self, &kValueObject);
 }
 
 @end

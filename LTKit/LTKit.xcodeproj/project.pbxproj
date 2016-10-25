@@ -19,6 +19,9 @@
 		1B0EED561DACE2C800F550DA /* BK4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0EED551DACE2C800F550DA /* BK4ViewController.m */; };
 		1B1658EF1D7ED716005E18A8 /* ExamNonARCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1658EE1D7ED716005E18A8 /* ExamNonARCViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1B1982491D9BA48200C18CD9 /* NSObject+LTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1982481D9BA48200C18CD9 /* NSObject+LTAdd.m */; };
+		1B1B7DEC1DBF3F97008F9245 /* LTWeakClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1B7DEB1DBF3F97008F9245 /* LTWeakClass.m */; };
+		1B1B7DEF1DBF3FC7008F9245 /* NSObject+LTWeakTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1B7DEE1DBF3FC7008F9245 /* NSObject+LTWeakTask.m */; };
+		1B1B7DF21DBF3FEF008F9245 /* MUHostClass+Association1.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1B7DF11DBF3FEF008F9245 /* MUHostClass+Association1.m */; };
 		1B1E66F71DADE1620038943C /* BK63Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1E66F61DADE1620038943C /* BK63Model.m */; };
 		1B1E66FB1DAE1AE00038943C /* BK5Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1E66FA1DAE1AE00038943C /* BK5Model.m */; };
 		1B33B3EB1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B33B3EA1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m */; };
@@ -114,6 +117,12 @@
 		1B1658EE1D7ED716005E18A8 /* ExamNonARCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamNonARCViewController.m; sourceTree = "<group>"; };
 		1B1982471D9BA48200C18CD9 /* NSObject+LTAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LTAdd.h"; sourceTree = "<group>"; };
 		1B1982481D9BA48200C18CD9 /* NSObject+LTAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LTAdd.m"; sourceTree = "<group>"; };
+		1B1B7DEA1DBF3F97008F9245 /* LTWeakClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTWeakClass.h; sourceTree = "<group>"; };
+		1B1B7DEB1DBF3F97008F9245 /* LTWeakClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTWeakClass.m; sourceTree = "<group>"; };
+		1B1B7DED1DBF3FC7008F9245 /* NSObject+LTWeakTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LTWeakTask.h"; sourceTree = "<group>"; };
+		1B1B7DEE1DBF3FC7008F9245 /* NSObject+LTWeakTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LTWeakTask.m"; sourceTree = "<group>"; };
+		1B1B7DF01DBF3FEF008F9245 /* MUHostClass+Association1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MUHostClass+Association1.h"; sourceTree = "<group>"; };
+		1B1B7DF11DBF3FEF008F9245 /* MUHostClass+Association1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MUHostClass+Association1.m"; sourceTree = "<group>"; };
 		1B1E66F51DADE1620038943C /* BK63Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BK63Model.h; sourceTree = "<group>"; };
 		1B1E66F61DADE1620038943C /* BK63Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BK63Model.m; sourceTree = "<group>"; };
 		1B1E66F91DAE1AE00038943C /* BK5Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BK5Model.h; sourceTree = "<group>"; };
@@ -293,6 +302,19 @@
 			name = 4;
 			sourceTree = "<group>";
 		};
+		1B1B7DE91DBF3C3D008F9245 /* demo2 */ = {
+			isa = PBXGroup;
+			children = (
+				1B1B7DEA1DBF3F97008F9245 /* LTWeakClass.h */,
+				1B1B7DEB1DBF3F97008F9245 /* LTWeakClass.m */,
+				1B1B7DED1DBF3FC7008F9245 /* NSObject+LTWeakTask.h */,
+				1B1B7DEE1DBF3FC7008F9245 /* NSObject+LTWeakTask.m */,
+				1B1B7DF01DBF3FEF008F9245 /* MUHostClass+Association1.h */,
+				1B1B7DF11DBF3FEF008F9245 /* MUHostClass+Association1.m */,
+			);
+			name = demo2;
+			sourceTree = "<group>";
+		};
 		1B1E66F41DADE1440038943C /* 63 */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +480,7 @@
 		1B752CF81DAF725F0038223D /* 8 */ = {
 			isa = PBXGroup;
 			children = (
+				1B1B7DE91DBF3C3D008F9245 /* demo2 */,
 				1B752D051DAF92330038223D /* demo1 */,
 				1B752CF91DAF72C00038223D /* BK8Model.h */,
 				1B752CFA1DAF72C00038223D /* BK8Model.m */,
@@ -881,6 +904,7 @@
 				1B33B3EB1D93BF9100B2D77F /* ReactiveCocoaDemoViewController.m in Sources */,
 				1B1982491D9BA48200C18CD9 /* NSObject+LTAdd.m in Sources */,
 				1BEDEC731D825A9D00669624 /* UIColor+LTAdd.m in Sources */,
+				1B1B7DF21DBF3FEF008F9245 /* MUHostClass+Association1.m in Sources */,
 				1B752D041DAF7B140038223D /* BK8ViewController.m in Sources */,
 				1B1658EF1D7ED716005E18A8 /* ExamNonARCViewController.m in Sources */,
 				1BEDEC721D82559A00669624 /* TextViewDemoViewController.m in Sources */,
@@ -890,6 +914,8 @@
 				1B752CFB1DAF72C00038223D /* BK8Model.m in Sources */,
 				1B5BD62A1D8E755400D7469F /* UIButtonViewController.m in Sources */,
 				1B5EA3251D77DCB900F4E716 /* UISegmentedControl+LTAdd.m in Sources */,
+				1B1B7DEF1DBF3FC7008F9245 /* NSObject+LTWeakTask.m in Sources */,
+				1B1B7DEC1DBF3F97008F9245 /* LTWeakClass.m in Sources */,
 				1B5EA2FA1D77D81000F4E716 /* ViewController.m in Sources */,
 				1B0EED4F1DACCCE200F550DA /* BK3MRCModel.m in Sources */,
 				1B0EED531DACE2A800F550DA /* BK4Model.m in Sources */,

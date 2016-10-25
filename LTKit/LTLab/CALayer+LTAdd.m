@@ -27,8 +27,5 @@
 - (void)setBorderColorFromUI:(UIColor *)color
 {
     self.borderColor = color.CGColor;
-    
-
-    
 }
 @end

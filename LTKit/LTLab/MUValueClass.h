@@ -11,5 +11,5 @@
 
 
 @interface MUValueClass : NSObject
-
+- (void)setWeakReference:(id)hostObj forWipeSEL:(SEL)wipeSEL;
 @end

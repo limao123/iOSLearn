@@ -7,7 +7,8 @@
 //
 
 #import "MUHostClass.h"
+#import "MUValueClass.h"
 
 @interface MUHostClass (Association)
-
+@property (nonatomic,weak) MUValueClass *valueObject;
 @end
